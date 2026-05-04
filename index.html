@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meatsmith | American BBQ Smokehouse Singapore | Telok Ayer</title>
+<meta name="description" content="The best BBQ near you in Singapore's CBD. Meatsmith is an American BBQ smokehouse in Telok Ayer — smoked brisket, ribs, wagyu burgers & catering. Reserve now.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Meatsmith","description":"American BBQ smokehouse in Telok Ayer, Singapore.","url":"https://meatsmith.com.sg","telephone":"+6562212262","servesCuisine":["American","BBQ","Smokehouse","American BBQ","Barbecue","Steakhouse"],"priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"167 Telok Ayer Street","addressLocality":"Singapore","postalCode":"068618","addressCountry":"SG"},"geo":{"@type":"GeoCoordinates","latitude":1.2808,"longitude":103.8478},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:30","closes":"22:30"}],"reservations":"https://meatsmith.com.sg/reservation/","menu":"https://meatsmith.com.sg/menu/","sameAs":["https://www.burntends.com.sg"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   DESIGN SYSTEM
+   Black & white editorial with #C60055 as surgical accent
+   Tone: high-contrast luxury editorial — like a boutique butcher
+   meets a fashion magazine. Unforgettable.
+═══════════════════════════════════════ */
+:root{
+  --black:#0A0A0A;
+  --off-black:#111111;
+  --dark:#1C1C1C;
+  --mid:#3D3D3D;
+  --grey:#888888;
+  --lt-grey:#C8C8C8;
+  --border:#2A2A2A;
+  --white:#FFFFFF;
+  --off-white:#F8F7F5;
+  --cream:#F2F0EC;
+  --red:#C60055; /* Pantone 214C — official Meatsmith brand accent */
+  --red-dim:rgba(198,0,85,0.08);
+  --ff-disp:'Unbounded',sans-serif;
+  --ff-serif:'Libre Baskerville',serif;
+  --ff-body:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--black);color:var(--white);font-family:var(--ff-body);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{display:none;animation:fadeIn 0.3s ease}
+.page.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── LAYOUT ── */
+.container{max-width:1200px;margin:0 auto;padding:0 48px}
+.container-narrow{max-width:860px;margin:0 auto;padding:0 48px}
+
+/* ── TYPE ── */
+.label{font-family:var(--ff-disp);font-size:9px;font-weight:400;letter-spacing:0.28em;text-transform:uppercase;color:var(--grey);display:block}
+.label-red{color:var(--red)}
+.d1{font-family:var(--ff-disp);font-weight:900;line-height:0.88;letter-spacing:-0.03em}
+.d2{font-family:var(--ff-disp);font-weight:700;line-height:0.92;letter-spacing:-0.02em}
+.serif{font-family:var(--ff-serif)}
+.italic{font-style:italic}
+.pink{color:var(--red)}
+
+/* ── DIVIDERS ── */
+.rule{border:none;border-top:1px solid var(--border);margin:0}
+.rule-pink{border-top-color:var(--red);opacity:0.35}
+
+/* ── BUTTONS ── */
+.btn{font-family:var(--ff-disp);font-size:10px;font-weight:700;letter-spacing:0.22em;display:inline-block;padding:14px 32px;transition:all 0.18s;cursor:pointer;border:none}
+.btn-primary{background:var(--white);color:var(--black)}
+.btn-primary:hover{background:var(--red);color:var(--white)}
+.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.25)}
+.btn-outline:hover{border-color:var(--white)}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:#b8105a}
+.btn-sm{padding:10px 22px;font-size:9px}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:90px;border-bottom:1px solid transparent;transition:all 0.25s;background:rgba(10,10,10,0.0)}
+.nav.solid{background:rgba(10,10,10,0.97);border-bottom-color:var(--border)}
+.nav-logo{font-family:var(--ff-disp);font-weight:900;font-size:16px;letter-spacing:0.08em;color:var(--white);cursor:pointer}
+.nav-logo span{color:var(--red)}
+.nav-center{display:flex;gap:32px}
+.nav-center a,.nav-center button{font-family:var(--ff-disp);font-size:9px;font-weight:400;letter-spacing:0.2em;color:var(--lt-grey);background:none;border:none;cursor:pointer;transition:color 0.15s;padding:0}
+.nav-center a:hover,.nav-center button:hover,.nav-center button.active{color:var(--white)}
+.nav-right{display:flex;gap:12px;align-items:center}
+
+/* ── FOOTER ── */
+.footer{background:var(--off-black);border-top:1px solid var(--border);padding:72px 0 36px}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px}
+.footer-brand .f-logo{font-family:var(--ff-disp);font-weight:900;font-size:18px;letter-spacing:0.08em;margin-bottom:14px}
+.footer-brand .f-logo span{color:var(--red)}
+.footer-brand p{font-size:13px;color:var(--grey);line-height:1.75;max-width:230px;margin-bottom:20px}
+.footer-brand .social{display:flex;gap:8px}
+.footer-brand .soc{width:34px;height:34px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--ff-disp);font-size:9px;color:var(--grey);transition:all 0.15s;cursor:pointer}
+.footer-brand .soc:hover{border-color:var(--red);color:var(--red)}
+.footer-col h4{font-family:var(--ff-disp);font-size:9px;font-weight:400;letter-spacing:0.28em;color:var(--red);margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a,.footer-col ul li button{font-size:13px;color:var(--grey);background:none;border:none;cursor:pointer;padding:0;transition:color 0.15s;text-align:left}
+.footer-col ul li a:hover,.footer-col ul li button:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;font-family:var(--ff-disp);font-size:9px;letter-spacing:0.15em;color:var(--mid)}
+.footer-bottom a{color:var(--mid);transition:color 0.15s}
+.footer-bottom a:hover{color:var(--grey)}
+
+/* ── MARQUEE ── */
+.marquee{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;background:var(--off-black)}
+.marquee-inner{display:flex;animation:scroll 30s linear infinite;width:max-content}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.m-item{font-family:var(--ff-disp);font-size:10px;font-weight:300;letter-spacing:0.25em;color:var(--grey);padding:0 36px;white-space:nowrap}
+.m-sep{color:var(--red);font-size:8px;margin:0 -24px}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:0.08s}
+.reveal-d2{transition-delay:0.16s}
+.reveal-d3{transition-delay:0.24s}
+
+/* ══════════════════════════════════════
+   PAGE: HOME
+══════════════════════════════════════ */
+
+/* Hero */
+.hero{position:relative;height:100svh;min-height:680px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 72px;position:relative;z-index:2}
+.hero-right{background:var(--off-black);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-bg-text{font-family:var(--ff-disp);font-weight:900;font-size:clamp(80px,14vw,180px);color:rgba(255,255,255,0.03);letter-spacing:-0.04em;line-height:1;user-select:none;white-space:nowrap;position:absolute;bottom:40px;right:-20px}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:0.4}
+.hero-tagline{font-family:var(--ff-disp);font-size:9px;font-weight:300;letter-spacing:0.28em;color:var(--grey);margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.hero-tagline::before{content:'';width:28px;height:1px;background:var(--red)}
+.hero-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(52px,6.5vw,96px);line-height:0.88;letter-spacing:-0.03em;color:var(--white);margin-bottom:32px}
+.hero-title .line-pink{color:var(--red)}
+.hero-title .line-outline{-webkit-text-stroke:1px rgba(255,255,255,0.3);color:transparent}
+.hero-body{font-size:15px;color:var(--grey);line-height:1.8;margin-bottom:40px;max-width:420px}
+.hero-body strong{color:var(--white);font-weight:300}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-info{position:absolute;bottom:48px;right:48px;text-align:right}
+.hero-stat .num{font-family:var(--ff-disp);font-weight:900;font-size:48px;color:var(--white);line-height:1}
+.hero-stat .unit{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.25em;color:var(--grey);margin-top:4px}
+.hero-badge{position:absolute;top:48px;left:48px;border:1px solid var(--border);padding:14px 20px}
+.hero-badge-label{font-family:var(--ff-disp);font-size:8px;letter-spacing:0.3em;color:var(--grey);margin-bottom:4px}
+.hero-badge-val{font-family:var(--ff-disp);font-weight:700;font-size:13px;color:var(--white);letter-spacing:0.05em}
+
+/* Home sections */
+.section{padding:96px 0}
+.section-sm{padding:64px 0}
+.section-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px}
+.section-title-lg{font-family:var(--ff-disp);font-weight:900;font-size:clamp(40px,5.5vw,80px);line-height:0.9;letter-spacing:-0.02em;color:var(--white)}
+.section-title-lg .outline{-webkit-text-stroke:1px rgba(255,255,255,0.2);color:transparent}
+
+/* Featured dishes grid */
+.dishes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.dish-card{background:var(--off-black);padding:40px 32px;position:relative;overflow:hidden;transition:background 0.25s}
+.dish-card:hover{background:var(--dark)}
+.dish-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease}
+.dish-card:hover::after{transform:scaleX(1)}
+.dish-num{font-family:var(--ff-disp);font-weight:900;font-size:56px;color:rgba(255,255,255,0.04);position:absolute;top:12px;right:16px;line-height:1}
+.dish-tag{font-family:var(--ff-disp);font-size:8px;font-weight:300;letter-spacing:0.28em;color:var(--grey);margin-bottom:12px}
+.dish-name{font-family:var(--ff-serif);font-weight:700;font-size:22px;color:var(--white);margin-bottom:10px;line-height:1.2}
+.dish-desc{font-size:14px;color:var(--grey);line-height:1.75;margin-bottom:18px}
+.dish-price{font-family:var(--ff-disp);font-weight:700;font-size:18px;color:var(--white)}
+.dish-card-wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.dish-card-wide .dish-content{padding:40px 48px;background:var(--off-black)}
+.dish-card-wide .dish-visual{background:var(--dark);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:280px}
+.dish-card-wide .dish-visual-text{font-family:var(--ff-disp);font-weight:900;font-size:100px;color:rgba(255,255,255,0.03);letter-spacing:-0.04em}
+
+/* Stats bar */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stat-item{background:var(--off-black);padding:40px 32px}
+.stat-item .s-num{font-family:var(--ff-disp);font-weight:900;font-size:48px;color:var(--white);line-height:1;margin-bottom:8px}
+.stat-item .s-lbl{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.22em;color:var(--grey)}
+
+/* Story band */
+.story-band{padding:80px 0;background:var(--off-black);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-body{font-size:16px;color:rgba(255,255,255,0.65);line-height:1.9;margin-bottom:20px}
+
+/* Events mini */
+.events-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.event-mini-card{background:var(--off-black);padding:36px 28px;transition:background 0.2s;cursor:pointer}
+.event-mini-card:hover{background:var(--dark)}
+.em-date{font-family:var(--ff-disp);font-weight:900;font-size:44px;color:var(--white);line-height:1}
+.em-month{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.25em;color:var(--red);margin-bottom:18px}
+.em-title{font-family:var(--ff-serif);font-weight:700;font-size:18px;color:var(--white);margin-bottom:8px}
+.em-desc{font-size:13px;color:var(--grey);line-height:1.7}
+
+/* Catering band */
+.catering-band{padding:80px 0;background:var(--red)}
+.cb-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.cb-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(36px,5vw,68px);color:var(--white);line-height:0.9;letter-spacing:-0.02em;margin-bottom:24px}
+.cb-body{font-size:16px;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:32px}
+.cb-services{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
+.cb-srv{background:rgba(0,0,0,0.12);padding:14px 18px}
+.cb-srv-name{font-family:var(--ff-disp);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--white);margin-bottom:2px}
+.cb-srv-desc{font-size:12px;color:rgba(255,255,255,0.65)}
+.btn-wh{background:var(--white);color:var(--red);font-family:var(--ff-disp);font-size:10px;font-weight:700;letter-spacing:0.22em;padding:14px 28px;display:inline-block;transition:background 0.18s}
+.btn-wh:hover{background:var(--cream)}
+.btn-owh{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.4);font-family:var(--ff-disp);font-size:10px;font-weight:700;letter-spacing:0.22em;padding:13px 28px;display:inline-block;transition:border-color 0.18s}
+.btn-owh:hover{border-color:var(--white)}
+.cb-visual{background:rgba(0,0,0,0.2);min-height:380px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.cb-vis-text{font-family:var(--ff-disp);font-weight:900;font-size:90px;color:rgba(255,255,255,0.06);letter-spacing:-0.02em}
+.cb-badge{position:absolute;bottom:-1px;left:-1px;background:var(--white);padding:22px 26px}
+.cb-badge-num{font-family:var(--ff-disp);font-weight:900;font-size:36px;color:var(--red);line-height:1}
+.cb-badge-txt{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.18em;color:var(--mid);margin-top:3px}
+
+/* ══════════════════════════════════════
+   PAGE: MENU
+══════════════════════════════════════ */
+.menu-hero{padding-top:120px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+.menu-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);background:var(--off-black);position:sticky;top:64px;z-index:100}
+.menu-tab{font-family:var(--ff-disp);font-size:9px;font-weight:400;letter-spacing:0.2em;color:var(--grey);padding:16px 28px;cursor:pointer;background:none;border:none;border-bottom:2px solid transparent;transition:all 0.15s;white-space:nowrap}
+.menu-tab:hover{color:var(--white)}
+.menu-tab.active{color:var(--white);border-bottom-color:var(--red)}
+.menu-section-wrap{display:none}
+.menu-section-wrap.active{display:block}
+.menu-section-inner{padding:64px 0}
+.menu-category-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(28px,4vw,48px);color:var(--white);letter-spacing:-0.02em;margin-bottom:8px}
+.menu-category-sub{font-size:14px;color:var(--grey);margin-bottom:48px;max-width:540px;line-height:1.7}
+.menu-items{display:flex;flex-direction:column;gap:0}
+.menu-item{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start;padding:28px 0;border-bottom:1px solid var(--border);transition:background 0.15s}
+.menu-item:first-child{border-top:1px solid var(--border)}
+.menu-item:hover .mi-name{color:var(--red)}
+.mi-left{}
+.mi-tag{font-family:var(--ff-disp);font-size:8px;letter-spacing:0.25em;color:var(--grey);margin-bottom:6px}
+.mi-name{font-family:var(--ff-serif);font-weight:700;font-size:20px;color:var(--white);margin-bottom:7px;transition:color 0.15s}
+.mi-desc{font-size:14px;color:var(--grey);line-height:1.7;max-width:580px}
+.mi-badges{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.mi-badge{font-family:var(--ff-disp);font-size:8px;letter-spacing:0.15em;padding:3px 9px;border:1px solid var(--border);color:var(--grey)}
+.mi-badge-pink{border-color:rgba(198,0,85,0.3);color:var(--red);background:var(--red-dim)}
+.mi-right{text-align:right;flex-shrink:0;padding-top:4px}
+.mi-price{font-family:var(--ff-disp);font-weight:700;font-size:18px;color:var(--white)}
+.mi-note{font-size:12px;color:var(--grey);margin-top:3px}
+.menu-note-box{border-left:2px solid var(--red);padding:20px 24px;background:var(--red-dim);margin:32px 0}
+.menu-note-box p{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.75}
+
+/* ══════════════════════════════════════
+   PAGE: ABOUT
+══════════════════════════════════════ */
+.about-hero{padding-top:140px;padding-bottom:96px}
+.about-headline{font-family:var(--ff-disp);font-weight:900;font-size:clamp(44px,6vw,88px);line-height:0.88;letter-spacing:-0.03em;color:var(--white);margin-bottom:48px}
+.about-headline .pink{color:var(--red)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-body{font-size:16px;color:rgba(255,255,255,0.65);line-height:1.9;margin-bottom:20px}
+.about-pull{font-family:var(--ff-serif);font-style:italic;font-size:clamp(20px,2.5vw,28px);color:var(--white);line-height:1.45;border-left:3px solid var(--red);padding-left:28px;margin:40px 0}
+.about-facts{display:flex;flex-direction:column;gap:0}
+.about-fact{padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:100px 1fr;gap:24px}
+.af-label{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--red)}
+.af-val{font-size:15px;color:var(--white);line-height:1.6}
+.faq-section{padding:80px 0;border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border);padding:24px 0;cursor:pointer}
+.faq-q{font-family:var(--ff-disp);font-weight:700;font-size:14px;letter-spacing:0.03em;color:var(--white);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .icon{font-size:18px;color:var(--red);flex-shrink:0;transition:transform 0.25s;line-height:1}
+.faq-a{font-size:15px;color:var(--grey);line-height:1.75;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s}
+.faq-item.open .faq-a{max-height:200px;padding-top:14px}
+.faq-item.open .faq-q .icon{transform:rotate(45deg)}
+
+/* ══════════════════════════════════════
+   PAGE: EXPERIENCE
+══════════════════════════════════════ */
+.exp-hero{padding-top:140px;padding-bottom:0;border-bottom:1px solid var(--border)}
+.exp-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:480px}
+.exp-hero-content{padding-bottom:72px}
+.exp-hero-visual{background:var(--off-black);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.exp-vis-text{font-family:var(--ff-disp);font-weight:900;font-size:140px;color:rgba(255,255,255,0.03);letter-spacing:-0.04em;line-height:1}
+.exp-vis-badge{position:absolute;background:var(--red);padding:18px 24px;bottom:0;right:0}
+.exp-vis-badge-val{font-family:var(--ff-disp);font-weight:900;font-size:28px;color:var(--white);line-height:1}
+.exp-vis-badge-lbl{font-family:var(--ff-disp);font-size:8px;letter-spacing:0.22em;color:rgba(255,255,255,0.7);margin-top:3px}
+.exp-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(36px,5vw,72px);line-height:0.9;letter-spacing:-0.02em;color:var(--white);margin-bottom:28px}
+.exp-body{font-size:16px;color:var(--grey);line-height:1.85;margin-bottom:28px}
+.exp-includes{border:1px solid var(--border);margin:32px 0}
+.exp-include{display:flex;align-items:center;gap:16px;padding:16px 24px;border-bottom:1px solid var(--border);font-size:15px;color:var(--white)}
+.exp-include:last-child{border-bottom:none}
+.exp-include::before{content:'';width:6px;height:6px;background:var(--red);border-radius:50%;flex-shrink:0}
+.exp-section{padding:72px 0;border-bottom:1px solid var(--border)}
+.exp-section-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(28px,3.5vw,52px);color:var(--white);letter-spacing:-0.02em;margin-bottom:20px;line-height:0.95}
+.exp-section-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.pairings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:32px}
+.pairing-card{background:var(--off-black);padding:28px;transition:background 0.2s}
+.pairing-card:hover{background:var(--dark)}
+.pc-drink{font-family:var(--ff-disp);font-weight:700;font-size:15px;color:var(--white);margin-bottom:4px}
+.pc-food{font-size:13px;color:var(--grey)}
+.pc-icon{font-size:22px;margin-bottom:12px}
+.fire-feast-details{border:1px solid var(--border);padding:36px}
+.ffd-row{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px}
+.ffd-row:last-child{border-bottom:none}
+.ffd-label{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--red);width:100px;flex-shrink:0;padding-top:2px}
+.ffd-val{color:var(--white);line-height:1.6}
+
+/* ══════════════════════════════════════
+   PAGE: HAPPENINGS
+══════════════════════════════════════ */
+.happ-hero{padding-top:140px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+.happ-events{padding:64px 0}
+.happ-event{display:grid;grid-template-columns:180px 1fr 220px;gap:48px;align-items:start;padding:56px 0;border-bottom:1px solid var(--border)}
+.he-date-block{position:sticky;top:120px}
+.he-day{font-family:var(--ff-disp);font-weight:900;font-size:72px;color:var(--white);line-height:1}
+.he-month{font-family:var(--ff-disp);font-size:10px;letter-spacing:0.28em;color:var(--red);margin-top:2px}
+.he-year{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.18em;color:var(--grey);margin-top:2px}
+.he-tag{font-family:var(--ff-disp);font-size:8px;letter-spacing:0.25em;color:var(--grey);margin-bottom:14px}
+.he-title{font-family:var(--ff-serif);font-weight:700;font-size:clamp(24px,3vw,38px);color:var(--white);margin-bottom:16px;line-height:1.2}
+.he-sub{font-family:var(--ff-disp);font-size:10px;font-weight:300;letter-spacing:0.18em;color:var(--grey);margin-bottom:20px}
+.he-body{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.85}
+.he-highlight{font-family:var(--ff-serif);font-weight:700;color:var(--white)}
+.he-cta-col{display:flex;flex-direction:column;gap:10px;padding-top:8px}
+.corporate-band{margin:0 -48px;padding:48px 48px;background:var(--off-black);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.corp-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.corp-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(20px,3vw,36px);color:var(--white);margin-bottom:10px}
+.corp-body{font-size:14px;color:var(--grey);line-height:1.75}
+.book-section{margin:72px 0;border:1px solid var(--border);padding:56px}
+.bs-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.bs-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(24px,3vw,42px);color:var(--white);margin-bottom:16px;line-height:0.95}
+.bs-body{font-size:15px;color:var(--grey);line-height:1.8;margin-bottom:28px}
+
+/* ── BLOG / STORIES SECTION (under Happenings) ── */
+.stories-section{padding:80px 0;border-top:1px solid var(--border)}
+.stories-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px}
+.stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.story-card{background:var(--off-black);padding:36px 32px;position:relative;overflow:hidden;transition:background 0.22s;cursor:pointer;display:flex;flex-direction:column}
+.story-card:hover{background:var(--dark)}
+.story-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease}
+.story-card:hover::after{transform:scaleX(1)}
+.story-card-featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.story-card-featured .sc-content{padding:48px 44px;background:var(--off-black);display:flex;flex-direction:column}
+.story-card-featured .sc-visual{background:var(--dark);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;min-height:320px}
+.story-card-featured .sc-visual-txt{font-family:var(--ff-disp);font-weight:900;font-size:110px;color:rgba(255,255,255,0.03);letter-spacing:-0.04em;line-height:1}
+.sc-category{font-family:var(--ff-disp);font-size:8px;font-weight:400;letter-spacing:0.28em;color:var(--red);margin-bottom:12px;display:block}
+.sc-title{font-family:var(--ff-serif);font-weight:700;font-size:clamp(18px,2vw,24px);color:var(--white);line-height:1.3;margin-bottom:10px}
+.story-card-featured .sc-title{font-size:clamp(22px,2.5vw,34px)}
+.sc-excerpt{font-size:14px;color:var(--grey);line-height:1.75;margin-bottom:20px;flex:1}
+.sc-meta{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border)}
+.sc-date{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.18em;color:var(--grey)}
+.sc-read{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.18em;color:var(--red)}
+.sc-sep{width:1px;height:10px;background:var(--border)}
+.sc-pill{font-family:var(--ff-disp);font-size:8px;letter-spacing:0.18em;padding:3px 9px;border:1px solid var(--border);color:var(--grey);display:inline-block;margin-bottom:14px}
+.sc-pill-recap{background:rgba(198,0,85,0.08);border-color:rgba(198,0,85,0.3);color:var(--red)}
+.sc-pill-guide{background:rgba(255,255,255,0.03);border-color:var(--border);color:var(--grey)}
+
+/* ══════════════════════════════════════
+   PAGE: CATERING
+══════════════════════════════════════ */
+.cat-hero{padding-top:140px;padding-bottom:0;background:var(--red)}
+.cat-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:520px}
+.cat-hero-content{padding-bottom:80px;display:flex;flex-direction:column;justify-content:flex-end}
+.cat-hero-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(40px,5.5vw,82px);color:var(--white);line-height:0.88;letter-spacing:-0.03em;margin-bottom:28px}
+.cat-hero-body{font-size:16px;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:36px;max-width:440px}
+.cat-hero-vis{background:rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.cat-vis-num{font-family:var(--ff-disp);font-weight:900;font-size:200px;color:rgba(255,255,255,0.07);line-height:1;letter-spacing:-0.05em}
+.cat-vis-badge{position:absolute;bottom:0;left:0;background:var(--white);padding:20px 28px}
+.cat-badge-num{font-family:var(--ff-disp);font-weight:900;font-size:36px;color:var(--red);line-height:1}
+.cat-badge-lbl{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.18em;color:var(--mid);margin-top:3px}
+.cat-types{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+.cat-type{background:var(--off-black);padding:36px 28px;transition:background 0.2s}
+.cat-type:hover{background:var(--dark)}
+.ct-icon{font-size:28px;margin-bottom:16px}
+.ct-title{font-family:var(--ff-disp);font-weight:700;font-size:14px;letter-spacing:0.05em;color:var(--white);margin-bottom:8px}
+.ct-body{font-size:13px;color:var(--grey);line-height:1.7}
+.cat-why{padding:80px 0;border-bottom:1px solid var(--border)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:48px}
+.why-item{background:var(--off-black);padding:36px;transition:background 0.2s}
+.why-item:hover{background:var(--dark)}
+.wi-num{font-family:var(--ff-disp);font-weight:900;font-size:44px;color:rgba(198,0,85,0.15);line-height:1;margin-bottom:12px}
+.wi-title{font-family:var(--ff-disp);font-weight:700;font-size:15px;color:var(--white);margin-bottom:10px;letter-spacing:0.03em}
+.wi-body{font-size:14px;color:var(--grey);line-height:1.75}
+.cat-process{padding:80px 0;border-bottom:1px solid var(--border)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:48px}
+.proc-s{background:var(--off-black);padding:32px 28px}
+.ps-step{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.22em;color:var(--red);margin-bottom:14px}
+.ps-title{font-family:var(--ff-disp);font-weight:700;font-size:15px;color:var(--white);margin-bottom:10px}
+.ps-body{font-size:13px;color:var(--grey);line-height:1.7}
+.cat-form-section{padding:80px 0}
+.cat-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.form-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(28px,3.5vw,52px);color:var(--white);letter-spacing:-0.02em;margin-bottom:16px;line-height:0.95}
+.form-body{font-size:15px;color:var(--grey);line-height:1.8;margin-bottom:28px}
+.form-group{margin-bottom:20px}
+.form-label{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.22em;color:var(--grey);display:block;margin-bottom:8px}
+.form-input,.form-select,.form-textarea{width:100%;background:var(--off-black);border:1px solid var(--border);color:var(--white);padding:14px 16px;font-family:var(--ff-body);font-size:14px;font-weight:300;outline:none;transition:border-color 0.15s;-webkit-appearance:none;appearance:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--red)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--grey)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-select option{background:var(--off-black)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cat-faq{border-top:1px solid var(--border);padding:20px 24px;margin-top:16px}
+.cat-faq-title{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.22em;color:var(--grey);margin-bottom:12px}
+.cat-faq-q{font-size:13px;color:rgba(255,255,255,0.5);padding:8px 0;cursor:pointer;transition:color 0.15s}
+.cat-faq-q:hover{color:var(--white)}
+
+/* ══════════════════════════════════════
+   PAGE: RESERVATION
+══════════════════════════════════════ */
+.res-hero{padding-top:140px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+.res-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(40px,5.5vw,80px);line-height:0.9;letter-spacing:-0.02em;color:var(--white);margin-bottom:20px}
+.res-sub{font-size:16px;color:var(--grey);line-height:1.8;max-width:520px}
+.res-body-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:72px 0;align-items:start}
+.res-info{}
+.res-info-title{font-family:var(--ff-disp);font-weight:700;font-size:20px;color:var(--white);margin-bottom:24px;letter-spacing:0.02em}
+.res-detail{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--border)}
+.rd-label{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--red);width:90px;flex-shrink:0;padding-top:2px}
+.rd-val{font-size:15px;color:var(--white);line-height:1.65}
+.rd-val a{color:var(--red)}
+.res-mrt{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.res-mrt span{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.12em;border:1px solid var(--border);color:var(--grey);padding:4px 10px}
+.res-booking-widget{background:var(--off-black);border:1px solid var(--border);padding:48px}
+.rbw-title{font-family:var(--ff-disp);font-weight:700;font-size:18px;color:var(--white);margin-bottom:8px;letter-spacing:0.03em}
+.rbw-sub{font-size:13px;color:var(--grey);margin-bottom:32px}
+.res-private-band{background:var(--off-black);border:1px solid var(--border);padding:48px;margin-top:24px}
+.rpb-title{font-family:var(--ff-disp);font-weight:700;font-size:17px;color:var(--white);margin-bottom:10px}
+.rpb-body{font-size:14px;color:var(--grey);line-height:1.75;margin-bottom:20px}
+
+/* ══════════════════════════════════════
+   PAGE: CONTACT
+══════════════════════════════════════ */
+.contact-hero{padding-top:140px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:72px 0}
+.contact-map{background:var(--off-black);border:1px solid var(--border);min-height:400px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.map-cross{position:absolute;width:20px;height:20px}
+.map-cross::before,.map-cross::after{content:'';position:absolute;background:var(--red)}
+.map-cross::before{width:1px;height:100%;left:50%;transform:translateX(-50%)}
+.map-cross::after{width:100%;height:1px;top:50%;transform:translateY(-50%)}
+.map-pulse{position:absolute;width:12px;height:12px;background:var(--red);border-radius:50%}
+.map-pulse::before{content:'';position:absolute;inset:-6px;background:rgba(198,0,85,0.25);border-radius:50%;animation:pulse 2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.8);opacity:0}}
+.map-tag{position:absolute;bottom:20px;left:20px;background:rgba(10,10,10,0.95);border:1px solid var(--border);padding:10px 16px}
+.mt-name{font-family:var(--ff-disp);font-weight:700;font-size:12px;color:var(--white);margin-bottom:2px}
+.mt-addr{font-size:12px;color:var(--grey)}
+.contact-info-title{font-family:var(--ff-disp);font-weight:900;font-size:clamp(28px,4vw,52px);color:var(--white);letter-spacing:-0.02em;line-height:0.92;margin-bottom:40px}
+.ci-block{padding:22px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:100px 1fr;gap:16px}
+.ci-label{font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--red);padding-top:2px}
+.ci-val{font-size:15px;color:var(--white);line-height:1.65}
+.ci-val a{color:var(--red)}
+.ci-val .note{font-size:13px;color:var(--grey);margin-top:3px}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero,.hero-right,.story-grid,.about-grid,.exp-hero-inner,.exp-section-grid,.cat-hero-inner,.cb-grid,.cat-form-grid,.res-body-grid,.contact-grid,.bs-grid,.corp-grid{grid-template-columns:1fr}
+  .hero-right,.cat-hero-vis,.exp-hero-visual{display:none}
+  .dishes-grid,.events-mini,.cat-types,.process-steps,.why-grid,.pairings-grid{grid-template-columns:1fr}
+  .dish-card-wide,.happ-event{grid-template-columns:1fr}
+  .stories-grid{grid-template-columns:1fr}
+  .story-card-featured{grid-template-columns:1fr}
+  .story-card-featured .sc-visual{display:none}
+  .dish-card-wide .dish-visual{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .container{padding:0 24px}
+  .container-narrow{padding:0 24px}
+  .nav-center{display:none}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Where is Meatsmith located?","acceptedAnswer":{"@type":"Answer","text":"167 Telok Ayer Street, Singapore 068618. Nearest MRT: Telok Ayer DT18 (3 min) or Tanjong Pagar EW15 (7 min)."}},
+{"@type":"Question","name":"Is Meatsmith the best BBQ near me in Singapore?","acceptedAnswer":{"@type":"Answer","text":"Meatsmith at 167 Telok Ayer Street is one of Singapore's most highly rated American BBQ smokehouse restaurants, operating since 2015 with an experienced live-fire kitchen team."}},
+{"@type":"Question","name":"Does Meatsmith offer barbecue catering in Singapore?","acceptedAnswer":{"@type":"Answer","text":"Yes. Meatsmith provides barbecue catering for corporate events, weddings and private parties across Singapore. Contact eat@meatsmith.com.sg."}},
+{"@type":"Question","name":"What is the best American BBQ smokehouse near me?","acceptedAnswer":{"@type":"Answer","text":"Meatsmith on Telok Ayer Street is Singapore's original American BBQ smokehouse — 14-hour smoked brisket, hickory pork ribs, wagyu burgers and premium platters."}},
+{"@type":"Question","name":"Does Meatsmith do BBQ delivery in Singapore?","acceptedAnswer":{"@type":"Answer","text":"Yes — BBQ delivery available through Meatsmith Xpress at xpress.meatsmith.com.sg. Same-day and next-day delivery across Singapore."}}
+]}
+</script>
+</head>
+<body>
+
+<!-- ════════════════════════════
+NAVIGATION
+════════════════════════════ -->
+<nav class="nav" id="mainNav">
+  <!-- <div class="nav-logo" onclick="showPage('home')">MEAT<span>SMITH</span></div> -->
+  <div class="nav-logo" onclick="showPage('home')">
+    <img src="/Users/phathaphonsawettaboot/Desktop/github-repo/newlynxmeatsmith/meatsmith-seo/assets/meatsmith-logo.png"
+        alt="Meatsmith — American BBQ Smokehouse Singapore"
+        width="70" height="70">
+  </div>
+  <div class="nav-center">
+    <button onclick="showPage('about')" id="nav-about">ABOUT</button>
+    <button onclick="showPage('menu')" id="nav-menu">MENU</button>
+    <button onclick="showPage('experience')" id="nav-experience">EXPERIENCE</button>
+    <button onclick="showPage('happenings')" id="nav-happenings">HAPPENINGS</button>
+    <button onclick="showPage('catering')" id="nav-catering">CATERING</button>
+    <button onclick="showPage('contact')" id="nav-contact">CONTACT</button>
+  </div>
+  <div class="nav-right">
+    <a href="https://xpress.meatsmith.com.sg" target="_blank" class="btn btn-outline btn-sm">DELIVERY</a>
+    <button onclick="showPage('reservation')" class="btn btn-primary btn-sm">RESERVE</button>
+  </div>
+</nav>
+
+<!-- ════════════════════════════
+     PAGE: HOME
+     SEO: H1 targets "american bbq singapore" (500/mo)
+          Body copy contains brisket, smokehouse, Telok Ayer, catering
+════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tagline">Telok Ayer · Singapore · Est. 2015</div>
+      <!-- H1 — primary keyword -->
+      <h1 class="hero-title d1">
+        <span style="display:block">THE FULL</span>
+        <span style="display:block" class="line-pink">METAL</span>
+        <span style="display:block" class="line-outline">SMOKE</span>
+        <span style="display:block">HOUSE</span>
+      </h1>
+      <!-- Crawlable body text — keywords: brisket, ribs, telok ayer, catering -->
+      <p class="hero-body">Singapore's American BBQ smokehouse in Telok Ayer. <strong>14-hour hickory smoked brisket</strong>, pork ribs and wagyu burgers — slow cooked over hickory on Southern Pride smokers, the same machines used by champion pitmasters across the American South.</p>
+      <div class="hero-ctas">
+        <button onclick="showPage('reservation')" class="btn btn-primary">RESERVE A TABLE</button>
+        <button onclick="showPage('menu')" class="btn btn-outline">VIEW MENU</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-grid-lines"></div>
+      <div class="hero-bg-text">BBQ</div>
+      <div class="hero-badge">
+        <div class="hero-badge-label">TELOK AYER · SINGAPORE</div>
+        <div class="hero-badge-val">EST. 2015</div>
+      </div>
+      <div class="hero-info">
+        <div class="hero-stat">
+          <div class="num">14</div>
+          <div class="unit">HOUR BRISKET</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee — keyword-rich running text -->
+  <div class="marquee">
+    <div class="marquee-inner">
+      <span class="m-item">American BBQ Singapore</span><span class="m-sep">✦</span>
+      <span class="m-item">14-Hour Smoked Brisket</span><span class="m-sep">✦</span>
+      <span class="m-item">Wood-Fire Smokehouse</span><span class="m-sep">✦</span>
+      <span class="m-item">167 Telok Ayer Street</span><span class="m-sep">✦</span>
+      <span class="m-item">BBQ Catering Singapore</span><span class="m-sep">✦</span>
+      <span class="m-item">Pork Ribs · Wagyu Burgers</span><span class="m-sep">✦</span>
+      <span class="m-item">Southern Pride Smokers</span><span class="m-sep">✦</span>
+      <span class="m-item">Hickory &amp; Mesquite</span><span class="m-sep">✦</span>
+      <span class="m-item">Barbeque Near Me</span><span class="m-sep">✦</span>
+      <span class="m-item">Barbeque Near Me</span><span class="m-sep">✦</span>
+      <span class="m-item">Best BBQ Singapore</span><span class="m-sep">✦</span>
+      <span class="m-item">American BBQ Singapore</span><span class="m-sep">✦</span>
+      <span class="m-item">14-Hour Smoked Brisket</span><span class="m-sep">✦</span>
+      <span class="m-item">Wood-Fire Smokehouse</span><span class="m-sep">✦</span>
+      <span class="m-item">167 Telok Ayer Street</span><span class="m-sep">✦</span>
+      <span class="m-item">BBQ Catering Singapore</span><span class="m-sep">✦</span>
+      <span class="m-item">Pork Ribs · Wagyu Burgers</span><span class="m-sep">✦</span>
+      <span class="m-item">Southern Pride Smokers</span><span class="m-sep">✦</span>
+      <span class="m-item">Hickory &amp; Mesquite</span><span class="m-sep">✦</span>
+      <span class="m-item">Barbeque Near Me</span><span class="m-sep">✦</span>
+      <span class="m-item">Best BBQ Singapore</span><span class="m-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- Featured dishes — HTML replaces PDF menu, dish names = crawlable keywords -->
+  <section class="section" style="padding-top:80px">
+    <div class="container">
+      <div class="section-hdr">
+        <div>
+          <span class="label label-red">THE MENU — meatsmith.com.sg/menu/</span>
+          <h2 class="section-title-lg">SMOKED &amp;<br><span class="outline">GRILLED</span></h2>
+        </div>
+        <button onclick="showPage('menu')" class="btn btn-outline btn-sm">FULL MENU →</button>
+      </div>
+      <div class="dishes-grid">
+        <!-- Dish names are H3s — SEO hierarchy: brisket near me, bbq ribs, wagyu burger -->
+        <div class="dish-card reveal">
+          <div class="dish-num">01</div>
+          <div class="dish-tag">SIGNATURE · SMOKED MEATS</div>
+          <h3 class="dish-name">14-Hour Hickory Brisket</h3>
+          <p class="dish-desc">USDA Choice beef brisket, salt and pepper rub, smoked low-and-slow over hickory wood for 14 hours on a Southern Pride smoker. Sliced to order with pickles and white bread.</p>
+          <div class="dish-price">$24/100g</div>
+        </div>
+        <div class="dish-card reveal reveal-d1">
+          <div class="dish-num">02</div>
+          <div class="dish-tag">HALF RACK · GERMANY</div>
+          <h3 class="dish-name">Pork Ribs</h3>
+          <p class="dish-desc">Pork spare ribs smoked 3 hours over hickory, glazed with lime and chipotle or house pork rub. Served with your choice of sides.</p>
+          <div class="dish-price">$34</div>
+        </div>
+        <div class="dish-card reveal reveal-d2">
+          <div class="dish-num">03</div>
+          <div class="dish-tag">BURGERS</div>
+          <h3 class="dish-name">Wagyu Cheeseburger</h3>
+          <p class="dish-desc">Full-blood wagyu beef patty, double American cheese, caramelised onion, pickles, smoked garlic aioli on toasted brioche. A Meatsmith classic since opening.</p>
+          <div class="dish-price">$28</div>
+        </div>
+        <div class="dish-card dish-card-wide reveal">
+          <div class="dish-content">
+            <div class="dish-num">04</div>
+            <div class="dish-tag">SHARING PLATTERS · FEEDS 4–6</div>
+            <h3 class="dish-name">Mother of All Platters</h3>
+            <p class="dish-desc">Full brisket flat, full rack of ribs, half smoked chicken, four sides, house bread and three sauces. Cheese &amp; Jalapeño Sausage, Chicken Tenders, Beef Cheek Pastrami, Smoked Chicken, Pork Ribs, Beef Brisket, 500g Dry Aged Porterhouse and Pulled Pork. The full Meatsmith spread.</p>
+            <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+              <button onclick="showPage('menu')" class="btn btn-primary btn-sm">FULL MENU</button>
+              <button onclick="showPage('reservation')" class="btn btn-outline btn-sm">RESERVE A TABLE</button>
+            </div>
+          </div>
+          <div class="dish-visual"><div class="dish-visual-text">PLATTER</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <div class="stats-bar">
+    <div class="stat-item reveal"><div class="s-num">14</div><div class="s-lbl">HOUR BRISKET</div></div>
+    <div class="stat-item reveal reveal-d1"><div class="s-num">70</div><div class="s-lbl">GUEST CAPACITY</div></div>
+    <div class="stat-item reveal reveal-d2"><div class="s-num">1★</div><div class="s-lbl">MICHELIN FAMILY</div></div>
+    <div class="stat-item reveal reveal-d3"><div class="s-num">2015</div><div class="s-lbl">ESTABLISHED</div></div>
+  </div>
+
+  <!-- Story section — crawlable intro text replacing empty homepage -->
+  <div class="story-band">
+    <div class="container">
+      <div class="story-grid">
+        <div class="reveal">
+          <span class="label label-red" style="margin-bottom:20px">OUR STORY</span>
+          <h2 style="font-family:var(--ff-serif);font-style:italic;font-size:clamp(28px,3.5vw,48px);color:var(--white);line-height:1.25;margin-bottom:28px">An obsession with fire, smoke, and the best ingredients money can buy.</h2>
+          <button onclick="showPage('about')" class="btn btn-outline btn-sm">READ THE FULL STORY →</button>
+        </div>
+        <div class="reveal reveal-d1">
+          <p class="story-body">Meatsmith is Singapore's powerhouse of American BBQ — a smokehouse built on fire, flavour, and the iconic Southern Pride Smokers flown in from the US. Whether you're searching for a smokehouse near you or the best BBQ in Singapore's CBD, Meatsmith on Telok Ayer Street is your answer. Industrial casual, seats 70 guests.</p>
+          <p class="story-body" style="margin-top:16px">Meatsmith is run by a team with deep roots in Singapore's live-fire restaurant scene — an obsession with exceptional ingredients, fire, and no shortcuts. Our drinks programme — whiskey and bourbon cocktails, craft beers and bold wines — is built to stand up to the smoke and fire on the plate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upcoming events mini -->
+  <section class="section">
+    <div class="container">
+      <div class="section-hdr">
+        <div>
+          <span class="label label-red">HAPPENINGS &amp; STORIES</span>
+          <h2 class="section-title-lg">WHAT'S <span class="outline">ON</span></h2>
+        </div>
+        <button onclick="showPage('happenings')" class="btn btn-outline btn-sm">ALL EVENTS &amp; STORIES →</button>
+      </div>
+      <!-- Event schema should be added to <head> for each of these -->
+      <div class="events-mini">
+        <div class="event-mini-card reveal" onclick="showPage('happenings')">
+          <div class="em-date">24</div>
+          <div class="em-month">MAY 2026</div>
+          <div class="em-title">The Korean Takeover</div>
+          <p class="em-desc">Korean sweet and spice meets Meatsmith's smoke and fire. One night only, from 5:30pm.</p>
+        </div>
+        <div class="event-mini-card reveal reveal-d1" onclick="showPage('happenings')">
+          <div class="em-date">10</div>
+          <div class="em-month">MAY 2026</div>
+          <div class="em-title">Mother's Day at Meatsmith</div>
+          <p class="em-desc">Premium Platter with a little extra for Mum — petite four, roasted marshmallow &amp; bubbles.</p>
+        </div>
+        <div class="event-mini-card reveal reveal-d2" onclick="showPage('happenings')">
+          <div class="em-date">23</div>
+          <div class="em-month">APR 2026</div>
+          <div class="em-title">Catena Zapata Wine Evening</div>
+          <p class="em-desc">Free-flowing walkthrough of Catena Zapata wines alongside Meatsmith's BBQ from the pit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering band — "bbq catering singapore" 500/mo -->
+  <div class="catering-band">
+    <div class="container">
+      <div class="cb-grid">
+        <div class="reveal">
+          <span class="label" style="color:rgba(255,255,255,0.6);margin-bottom:16px">BBQ CATERING · SINGAPORE</span>
+          <h2 class="cb-title">BRING THE SMOKEHOUSE TO YOU</h2>
+          <p class="cb-body">Live-fire BBQ catering for corporate events, private parties, weddings and team gatherings across Singapore. The same smoked meats, the same live-fire theatre — at your venue.</p>
+          <div class="cb-services">
+            <div class="cb-srv"><div class="cb-srv-name">Corporate Events</div><div class="cb-srv-desc">CBD offices, galas, team bonding</div></div>
+            <div class="cb-srv"><div class="cb-srv-name">Weddings</div><div class="cb-srv-desc">Bespoke menus, dedicated team</div></div>
+            <div class="cb-srv"><div class="cb-srv-name">Private Parties</div><div class="cb-srv-desc">Birthdays, farewells, celebrations</div></div>
+            <div class="cb-srv"><div class="cb-srv-name">Live Stations</div><div class="cb-srv-desc">On-site carving, fire cooking</div></div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button onclick="showPage('catering')" class="btn-wh btn">ENQUIRE ABOUT CATERING</button>
+            <button onclick="showPage('catering')" class="btn-owh btn">VIEW CATERING MENU</button>
+          </div>
+        </div>
+        <div class="reveal reveal-d1">
+          <div class="cb-visual">
+            <div class="cb-vis-text">GRILL</div>
+            <div class="cb-badge"><div class="cb-badge-num">$3.5K</div><div class="cb-badge-txt">FROM (EXCLUSIVE LUNCH)</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="f-logo">
+            <img src="/Users/phathaphonsawettaboot/Desktop/github-repo/newlynxmeatsmith/meatsmith-seo/assets/meatsmith-logo.png"
+              alt="Meatsmith — American BBQ Smokehouse Singapore"
+              width="70" height="70">
+          </div>
+          <p>Singapore's American BBQ smokehouse. Wood-fired, low-and-slow, no shortcuts. 167 Telok Ayer Street.</p>
+          <div class="social">
+            <a href="https://instagram.com/meatsmith.sg" target="_blank" class="soc">IG</a>
+            <a href="https://facebook.com/meatsmith.sg" target="_blank" class="soc">FB</a>
+            <a href="https://chope.co" target="_blank" class="soc">CH</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>VISIT</h4>
+          <ul>
+            <li><button onclick="showPage('menu')">Full Menu</button></li>
+            <li><button onclick="showPage('reservation')">Reserve a Table</button></li>
+            <li><button onclick="showPage('experience')">Tasting Flights</button></li>
+            <li><button onclick="showPage('happenings')">Events &amp; Happenings</button></li>
+            <li><button onclick="showPage('about')">About Meatsmith</button></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SERVICES</h4>
+          <ul>
+            <li><button onclick="showPage('catering')">BBQ Catering Singapore</button></li>
+            <li><button onclick="showPage('catering')">Corporate Events</button></li>
+            <li><button onclick="showPage('catering')">Wedding Catering</button></li>
+            <li><a href="https://xpress.meatsmith.com.sg" target="_blank">BBQ Delivery (Xpress)</a></li>
+            <li><button onclick="showPage('reservation')">Private Dining</button></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LOCATION</h4>
+          <ul>
+            <li><a href="https://maps.google.com/?q=Meatsmith+Singapore" target="_blank">167 Telok Ayer Street</a></li>
+            <li><a href="tel:+6562212262">+65 6221 2262</a></li>
+            <li><a href="mailto:eat@meatsmith.com.sg">eat@meatsmith.com.sg</a></li>
+            <li><a href="mailto:eat@meatsmith.com.sg">Catering enquiries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Meatsmith Singapore</span>
+        <div style="display:flex;gap:20px"><a href="#">Privacy</a><a href="/sitemap.xml">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════
+     PAGE: MENU
+     SEO: HTML replaces PDF. Title: "Meatsmith Menu | Smoked Brisket, BBQ Ribs & Wagyu Burgers | Singapore"
+          Dish names are H3s — "brisket near me" 500/mo, "bbq ribs" 500/mo
+════════════════════════════ -->
+<div id="page-menu" class="page">
+  <div class="menu-hero">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:14px">THE MENU — meatsmith.com.sg/menu/</span>
+      <h1 class="section-title-lg" style="font-size:clamp(44px,6vw,88px);margin-bottom:16px">SMOKED MEATS<br>&amp; <span class="outline">MORE</span></h1>
+      <p style="font-size:15px;color:var(--grey);max-width:560px;line-height:1.75">The best BBQ ribs, smoked brisket and wagyu burgers in Singapore. Everything cooked over wood fire at our American BBQ smokehouse in Telok Ayer. Menus change seasonally.</p>
+    </div>
+  </div>
+
+  <!-- Sticky tabs -->
+  <div class="menu-tabs" id="menuTabs">
+    <button class="menu-tab active" onclick="switchMenu('smoked')">SMOKED MEATS</button>
+    <button class="menu-tab" onclick="switchMenu('burgers')">BURGERS</button>
+    <button class="menu-tab" onclick="switchMenu('starters')">STARTERS &amp; SIDES</button>
+    <button class="menu-tab" onclick="switchMenu('platters')">PLATTERS</button>
+    <button class="menu-tab" onclick="switchMenu('drinks')">DRINKS</button>
+    <button class="menu-tab" onclick="switchMenu('desserts')">DESSERTS</button>
+    <button class="menu-tab" onclick="switchMenu('delivery')">DELIVERY MENU</button>
+  </div>
+
+  <div class="container">
+    <!-- SMOKED MEATS -->
+    <div id="menu-smoked" class="menu-section-wrap active">
+      <div class="menu-section-inner">
+        <h2 class="menu-category-title">From the Smokers &amp; Grills</h2>
+        <p class="menu-category-sub">Every cut smoked low-and-slow on Southern Pride smokers over hickory wood. No gas, no shortcuts. All prices subject to 10% service charge and 9% GST for dine-in.</p>
+        <div class="menu-note-box"><p>Brisket is smoked for 12–14 hours overnight. Minimum order 100g. All smoked meats prepared fresh daily and available while stocks last.</p></div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">BEEF · BRANDT USDA · 12–14 HOURS</div>
+              <h3 class="mi-name">Beef Brisket</h3>
+              <p class="mi-desc">14-hour smoked Brandt USDA brisket, rubbed with salt, black pepper and vinegar powder. Smoked low and slow, rested in its own juices. Sliced to order. Minimum 100g.</p>
+              <div class="mi-badges"><span class="mi-badge">HICKORY WOOD</span><span class="mi-badge">12–14 HRS</span><span class="mi-badge mi-badge-pink">SIGNATURE</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$24/100g</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">BEEF · WANDERER AUSTRALIA · 12 HOURS</div>
+              <h3 class="mi-name">Beef Short Rib</h3>
+              <p class="mi-desc">12-hour smoked Wanderer beef short rib, rubbed with yellow mustard, vinegar powder, salt and black pepper. Deboned, served with jalapeño corn salsa and grated horseradish.</p>
+              <div class="mi-badges"><span class="mi-badge">WANDERER AUS</span><span class="mi-badge">12 HRS</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$48</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">PORK · GERMANY · 3+1 HOURS</div>
+              <h3 class="mi-name">Half Rack Pork Ribs</h3>
+              <p class="mi-desc">Whole rack of pork spare ribs smoked 3 hours, glazed with chipotle and smoked 1 hour more. Served lime and chipotle glazed (WET) or with house pork rub (DRY). Your choice.</p>
+              <div class="mi-badges"><span class="mi-badge">GERMANY</span><span class="mi-badge">WET OR DRY</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$34</div><div class="mi-note">Full rack add-on available</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">CHICKEN · MALAYSIA LOCAL FARM · JERK SMOKED</div>
+              <h3 class="mi-name">Half Chicken</h3>
+              <p class="mi-desc">Free-range chicken marinated overnight in jerk spice — chilli, allspice, cinnamon, lime. Hot smoked 45 mins, then grilled until skin is crispy. Finished with chicken jus.</p>
+              <div class="mi-badges"><span class="mi-badge">MALAYSIA FARM</span><span class="mi-badge">JERK MARINATED</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$28</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">BEEF · BLACK ANGUS · VICTORIA &amp; TASMANIA</div>
+              <h3 class="mi-name">Black Angus Onglet</h3>
+              <p class="mi-desc">Pure black barley-fed Angus onglet — no added hormones, MSA graded, tenderstretched. Custom barley feed ration. Grilled medium-rare at 56°C. Served with two sauces.</p>
+              <div class="mi-badges"><span class="mi-badge">BLACK ANGUS</span><span class="mi-badge">MSA GRADED</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$48</div><div class="mi-note">Min. 200g</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">BEEF · DRY AGED 45 DAYS · BLIGHTY NSW</div>
+              <h3 class="mi-name">Dry Aged Wanderer Porterhouse</h3>
+              <p class="mi-desc">Free range, barley fed, GMO-free and antibiotic-free Wanderer cattle from Blighty, NSW. Dry aged in-house 45 days at 0–4°C. Minimum 500g order. Served with two sauces.</p>
+              <div class="mi-badges"><span class="mi-badge">45-DAY DRY AGED</span><span class="mi-badge mi-badge-pink">SHOWSTOPPER</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$36/100g</div><div class="mi-note">Min. 500g</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">FISH · LOCAL FARM · WHOLE</div>
+              <h3 class="mi-name">Seabass</h3>
+              <p class="mi-desc">Whole local farm seabass (~1kg), grilled in a BBQ basket until skin is crispy. Served with house-made gumbo sauce, andouille sausage, pickled carrot, okra, banana shallot and radish.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$32</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">LAMB · MC HERD · TASMANIA AUSTRALIA</div>
+              <h3 class="mi-name">Lamb Chops</h3>
+              <p class="mi-desc">Tasmanian lamb chops marinated in cardamom, cumin, coriander, black pepper and olive oil. Grilled to medium (60°C). Served on Japanese mustard mash with chimichurri sauce. 2 pieces (~200g).</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$42</div></div>
+          </div>
+
+</div>
+      </div>
+    </div>
+
+    <!-- BURGERS -->
+    <div id="menu-burgers" class="menu-section-wrap">
+      <div class="menu-section-inner">
+        <h2 class="menu-category-title">Burgers</h2>
+        <p class="menu-category-sub">All burgers served on house-made potato buns. Add on fries, salad and a soft drink for $10. All prices subject to 10% service charge and 9% GST for dine-in.</p>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">WAGYU BEEF · DOUBLE PATTY</div>
+              <h3 class="mi-name">Meatsmith Wagyu Cheeseburger</h3>
+              <p class="mi-desc">Two wagyu beef patties (95g each) cooked on flat top. Double American cheese, burger sauce and pickles on house potato bun. A Meatsmith staple.</p>
+              <div class="mi-badges"><span class="mi-badge mi-badge-pink">SIGNATURE</span><span class="mi-badge">DOUBLE PATTY</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$28</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">BEEF · DOUBLE PATTY</div>
+              <h3 class="mi-name">Meatsmith Cheeseburger</h3>
+              <p class="mi-desc">Two beef patties (95g each — ground beef, beef fat, cooked brisket). Double American cheese, burger sauce and pickles on house potato bun.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$20</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">BEEF BRISKET · SMOKED 12–14 HOURS</div>
+              <h3 class="mi-name">Premium Brisket Burger</h3>
+              <p class="mi-desc">80g sliced smoked brisket on a single beef patty with American cheese. Red onion, BBQ sauce, aioli and pickles on house potato bun.</p>
+              <div class="mi-badges"><span class="mi-badge mi-badge-pink">BEST SELLER</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$30</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">BEEF · SINGLE PATTY</div>
+              <h3 class="mi-name">Classic Cheeseburger</h3>
+              <p class="mi-desc">Single beef patty, American cheddar, tomato, lettuce, red onion, burger sauce and pickles on house potato bun.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$16</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">CHICKEN · NASHVILLE STYLE</div>
+              <h3 class="mi-name">Nashville Fried Chicken Burger</h3>
+              <p class="mi-desc">Buttermilk-brined local chicken thigh, dusted with seasoned flour, fried golden and dipped in Nashville oil and spice. Served with aioli, lettuce and pickles on potato bun.</p>
+              <div class="mi-badges"><span class="mi-badge mi-badge-pink">SPICY</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$16</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">PORK · SMOKED 14–16 HOURS</div>
+              <h3 class="mi-name">Pulled Pork Burger</h3>
+              <p class="mi-desc">Smoked pork shoulder pulled off the bone after 14–16 hours. Heated in BBQ sauce and pickled onion. Served with pickled cucumber, red onion and BBQ mustard on potato bun.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$16</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">VEGETARIAN · LOCAL MUSHROOM</div>
+              <h3 class="mi-name">Crispy Portobello Burger</h3>
+              <p class="mi-desc">Portobello mushroom confit in butter, herbs and garlic. Panko-crumbed and fried golden. Served with feta cheese, pesto aioli, pickled beetroot and lettuce on potato bun.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$18</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu-starters" class="menu-section-wrap">
+      <div class="menu-section-inner">
+        <h2 class="menu-category-title">Starters</h2>
+        <p class="menu-category-sub">Begin with something from the fire or the fryer. All prices subject to 10% service charge and 9% GST for dine-in.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--border)">
+          <div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Cornbread &amp; Smoked Butter</h3><p class="mi-desc">Two warm corn breads drizzled with honey, served with house hickory-smoked butter sprinkled with sea salt.</p></div>
+                <div class="mi-right"><div class="mi-price">$4</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Padron Peppers</h3><p class="mi-desc">Deep fried and grilled, finished with sea salt and lemon zest. Served with labneh and harissa sauce.</p></div>
+                <div class="mi-right"><div class="mi-price">$12</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Brisket Spring Rolls</h3><p class="mi-desc">Smoked brisket cooked to marmalade style with pickled mustard seeds, molasses and beef jus. Fried golden. Served with BBQ aioli.</p></div>
+                <div class="mi-right"><div class="mi-price">$12</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Cheese &amp; Jalapeño Sausage</h3><p class="mi-desc">House-made jalapeño and cheddar sausage, hot smoked then seared. Drizzled with BBQ mustard sauce. 120g.</p></div>
+                <div class="mi-right"><div class="mi-price">$10</div></div>
+              </div>
+            </div>
+          </div>
+          <div style="border-left:1px solid var(--border)">
+            <div class="menu-items" style="padding:0 24px">
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Chicken Tenders &amp; Buffalo Sauce</h3><p class="mi-desc">Salt-brined chicken tenders, fried crispy and dipped in honey hot sauce. Served with blue cheese sauce. 3–4 pieces.</p></div>
+                <div class="mi-right"><div class="mi-price">$12</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Pork Belly Burnt Ends</h3><p class="mi-desc">Pork belly smoked 4 hours, portioned bite-size, grilled on plancha and glazed with chipotle. Served on BBQ mustard sauce with pickled beetroot. 3 pieces (40g each).</p><div class="mi-badges"><span class="mi-badge mi-badge-pink">SIGNATURE</span></div></div>
+                <div class="mi-right"><div class="mi-price">$15</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Beef Cheek Pastrami</h3><p class="mi-desc">Victorian Australian beef cheek brined 2 weeks in pickling spice, smoked 6 hours, served on sauerkraut with mustard aioli and fried Italian parsley. 3 pieces (40g each).</p></div>
+                <div class="mi-right"><div class="mi-price">$18</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Chilli Cheese Nachos</h3><p class="mi-desc">House corn tortilla chips with homemade cheese sauce and brisket chilli con carne. Topped with sour cream, pickled jalapeño and spring onions.</p></div>
+                <div class="mi-right"><div class="mi-price">$18</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="menu-category-title" style="margin-top:48px">Sides</h2>
+        <p class="menu-category-sub">Built to share. Order two or three for the table.</p>
+        <div class="menu-items">
+          <div class="menu-item"><div class="mi-left"><h3 class="mi-name">Garlic Bread</h3><p class="mi-desc">House potato bun stuffed with house garlic butter (parmesan, thyme, rosemary, parsley, lemon). Baked and topped with parmesan.</p></div><div class="mi-right"><div class="mi-price">$6</div></div></div>
+          <div class="menu-item"><div class="mi-left"><h3 class="mi-name">Sweet Corn &amp; Creole Butter</h3><p class="mi-desc">Corn smoked 2 hours, grilled and tossed in house creole butter (caramelised onion, capsicum, celery, pork rub). 4 pieces.</p></div><div class="mi-right"><div class="mi-price">$10</div></div></div>
+          <div class="menu-item"><div class="mi-left"><h3 class="mi-name">Coleslaw</h3><p class="mi-desc">White and purple cabbage, carrot, golden raisin and spring onion tossed in maple lemon dressing.</p></div><div class="mi-right"><div class="mi-price">$8</div></div></div>
+          <div class="menu-item"><div class="mi-left"><h3 class="mi-name">Kale &amp; Feta Salad</h3><p class="mi-desc">Massaged kale in maple mustard dressing, topped with Persian feta cheese, roasted almonds, banana shallot and red radish.</p></div><div class="mi-right"><div class="mi-price">$12</div></div></div>
+          <div class="menu-item"><div class="mi-left"><h3 class="mi-name">Mac &amp; Cheese</h3><p class="mi-desc">Al dente macaroni in a three-cheese sauce (American cheddar, shredded cheddar, parmesan). Topped with Burnt Ends sourdough crumbs and spring onions.</p></div><div class="mi-right"><div class="mi-price">$10</div></div></div>
+          <div class="menu-item"><div class="mi-left"><h3 class="mi-name">Fries</h3><p class="mi-desc">Deep fried golden, sprinkled with pork rub and salt. Served with ketchup.</p></div><div class="mi-right"><div class="mi-price">$8</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu-platters" class="menu-section-wrap">
+      <div class="menu-section-inner">
+        <h2 class="menu-category-title">Sharing Platters</h2>
+        <p class="menu-category-sub">Additional $15 for 3 choice of sides. All prices subject to 10% service charge and 9% GST for dine-in. Takeaway includes GST only.</p>
+        <div class="menu-note-box"><p>For large group platters (10+), please give us 3 days advance notice. Contact eat@meatsmith.com.sg or call +65 6221 2262.</p></div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">FEEDS 2 · SNACKS &amp; STARTERS</div>
+              <h3 class="mi-name">Snack Platter</h3>
+              <p class="mi-desc">Cornbread and Smoked Butter · Cheese and Jalapeño Sausage · Chicken Tenders and Buffalo Sauce · Brisket Spring Rolls</p>
+              <div class="mi-badges"><span class="mi-badge">FEEDS 2</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$38</div><div class="mi-note">for 2</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">FEEDS 2 · MEAT FORWARD</div>
+              <h3 class="mi-name">Meat Platter</h3>
+              <p class="mi-desc">Cornbread and Smoked Butter · Chicken Tenders and Buffalo Sauce · Cheese and Jalapeño Sausage · Lime and Chipotle Glazed and Memphis Rub Pork Ribs · Beef Brisket · Pulled Pork</p>
+              <div class="mi-badges"><span class="mi-badge">FEEDS 2</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$98</div><div class="mi-note">for 2</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">FEEDS 2 · PREMIUM SELECTION</div>
+              <h3 class="mi-name">Premium Platter</h3>
+              <p class="mi-desc">Cornbread and Smoked Butter · Pork Belly Burnt Ends · Beef Cheek Pastrami · Lime and Chipotle Glazed and Memphis Rub Pork Ribs · Black Angus Onglet · Beef Short Rib · Pulled Pork</p>
+              <div class="mi-badges"><span class="mi-badge">FEEDS 2</span><span class="mi-badge mi-badge-pink">BEST VALUE</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$128</div><div class="mi-note">for 2</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-tag">FEEDS 5 · THE FULL SPREAD</div>
+              <h3 class="mi-name">Mother of All Platters</h3>
+              <p class="mi-desc">Cheese and Jalapeño Sausage · Chicken Tenders and Buffalo Sauce · Beef Cheek Pastrami · Smoked Chicken · Lime and Chipotle Glazed and Memphis Rub Pork Ribs · Beef Brisket · 500g Dry Aged Porterhouse · Pulled Pork<br><br>Additional $15 for 3 choice of sides.</p>
+              <div class="mi-badges"><span class="mi-badge">FEEDS 5</span><span class="mi-badge mi-badge-pink">SHOWSTOPPER</span></div>
+            </div>
+            <div class="mi-right"><div class="mi-price">$298</div><div class="mi-note">for 5</div></div>
+          </div>
+        </div>
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+          <button onclick="showPage('reservation')" class="btn btn-primary">RESERVE YOUR TABLE</button>
+          <button onclick="showPage('catering')" class="btn btn-outline">CATERING PLATTERS →</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu-drinks" class="menu-section-wrap">
+      <div class="menu-section-inner">
+        <h2 class="menu-category-title">Drinks</h2>
+        <p class="menu-category-sub">A curated beverage programme — artisanal wines, craft beers, crafted cocktails, and a fine spirits collection with a focus on American whiskeys and bourbons that complement the smokehouse.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+          <div>
+            <h3 style="font-family:var(--ff-disp);font-weight:700;font-size:13px;letter-spacing:0.18em;color:var(--white);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)">SIGNATURE COCKTAILS</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Smoked Old Fashioned</h3><p class="mi-desc">Bulleit Bourbon, hickory smoke, Demerara syrup, Angostura bitters, orange peel. Smoked tableside.</p><div class="mi-badges"><span class="mi-badge mi-badge-pink">SIGNATURE</span></div></div>
+                <div class="mi-right"><div class="mi-price">$22</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Southern Whisky Fizz</h3><p class="mi-desc">Four Roses Bourbon, lemon, simple syrup, egg white, soda. Silky and tart.</p></div>
+                <div class="mi-right"><div class="mi-price">$20</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Southern Iced Tea</h3><p class="mi-desc">Jack Daniel's Tennessee Whiskey, cold brew tea, lemon, mint, honey.</p></div>
+                <div class="mi-right"><div class="mi-price">$18</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Pickle Back</h3><p class="mi-desc">Jameson Irish Whiskey neat with a house pickle juice chaser. An American BBQ tradition.</p></div>
+                <div class="mi-right"><div class="mi-price">$16</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Meatsmith Mule</h3><p class="mi-desc">Bulleit Rye, fresh lime, ginger beer, angostura bitters served in a copper mug.</p></div>
+                <div class="mi-right"><div class="mi-price">$18</div></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 style="font-family:var(--ff-disp);font-weight:700;font-size:13px;letter-spacing:0.18em;color:var(--white);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)">BOURBON &amp; WHISKEY</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Maker's Mark</h3><p class="mi-desc">Wheated bourbon. Soft, sweet, approachable. Great entry point with the brisket.</p></div>
+                <div class="mi-right"><div class="mi-price">$16</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Bulleit Bourbon</h3><p class="mi-desc">High rye content — spicy and bold. A natural match for our smoked pork ribs.</p></div>
+                <div class="mi-right"><div class="mi-price">$16</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Woodford Reserve</h3><p class="mi-desc">Complex, triple-distilled small batch. Vanilla, toffee, slight fruit. Pairs with brisket.</p></div>
+                <div class="mi-right"><div class="mi-price">$20</div></div>
+              </div>
+              <div class="menu-item">
+                <div class="mi-left"><h3 class="mi-name">Four Roses Single Barrel</h3><p class="mi-desc">Rich and full-bodied. Deep caramel, oak and dried fruit. Sip neat after the meal.</p></div>
+                <div class="mi-right"><div class="mi-price">$24</div></div>
+              </div>
+            </div>
+            <div style="margin-top:28px">
+              <h3 style="font-family:var(--ff-disp);font-weight:700;font-size:13px;letter-spacing:0.18em;color:var(--white);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)">CRAFT BEERS</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="mi-left"><h3 class="mi-name">Draught Lager</h3><p class="mi-desc">Rotating selection — crisp, cold, refreshing. Ask your server for today's pour.</p></div>
+                  <div class="mi-right"><div class="mi-price">$12</div></div>
+                </div>
+                <div class="menu-item">
+                  <div class="mi-left"><h3 class="mi-name">Craft IPA</h3><p class="mi-desc">Rotating selection of local and imported craft IPAs. Ask your server.</p></div>
+                  <div class="mi-right"><div class="mi-price">$14</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div id="menu-desserts" class="menu-section-wrap">
+      <div class="menu-section-inner">
+        <h2 class="menu-category-title">Desserts</h2>
+        <p class="menu-category-sub">End on something sweet. Southern American classics, made in-house.</p>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="mi-left"><div class="mi-tag">WARM</div><h3 class="mi-name">Roasted Marshmallows</h3><p class="mi-desc">House-made vanilla marshmallows (20g each) torched tableside to caramelised. Served 2 pieces.</p></div>
+            <div class="mi-right"><div class="mi-price">$3</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left"><div class="mi-tag">WARM · SEASONAL</div><h3 class="mi-name">Apple Crumble</h3><p class="mi-desc">Caramelised apple jam with house oat and nut crumble, vanilla ice cream and smoked caramel sauce.</p><div class="mi-badges"><span class="mi-badge mi-badge-pink">HOUSE FAVOURITE</span></div></div>
+            <div class="mi-right"><div class="mi-price">$12</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left"><div class="mi-tag">WARM · CHOCOLATE</div><h3 class="mi-name">Chocolate Lava Cake</h3><p class="mi-desc">Dark chocolate and butter lava cake baked to order 6 minutes. Served with icing sugar, almond flakes and vanilla ice cream.</p></div>
+            <div class="mi-right"><div class="mi-price">$12</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left"><div class="mi-tag">COLD · SUNDAE</div><h3 class="mi-name">Honeycomb Sundae</h3><p class="mi-desc">Three scoops of cold-smoked vanilla ice cream (made in-house on Pacojet), hot fudge, smoked caramel sauce and house honeycomb pieces.</p></div>
+            <div class="mi-right"><div class="mi-price">$14</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu-delivery" class="menu-section-wrap">
+      <div class="menu-section-inner">
+        <h2 class="menu-category-title">Delivery &amp; Self Pick-Up</h2>
+        <p class="menu-category-sub">Order Meatsmith's smoked meats and sides online through Meatsmith Xpress. Delivery across Singapore or self pick-up at 167 Telok Ayer Street. Available daily.</p>
+        <div class="menu-note-box"><p>Our delivery menu is managed through Meatsmith Xpress at xpress.meatsmith.com.sg. Orders available for same-day delivery (cut-off 2pm) or next-day delivery. Smoked meats are vacuum-packed and reheating instructions are included.</p></div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <div class="mi-left">
+              <h3 class="mi-name">Smoked Brisket — Delivery Pack</h3>
+              <p class="mi-desc">400g vacuum-packed smoked brisket, cold-smoked and ready to reheat. Includes reheating guide, pickles, white bread and house BBQ sauce.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">From $42</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <h3 class="mi-name">Full Rack Ribs — Delivery Pack</h3>
+              <p class="mi-desc">Full St. Louis rack, glazed and ready to reheat. Serves 2. Includes side sauce and reheating guide.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$58</div></div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <h3 class="mi-name">Delivery Bundle — Feeds 4</h3>
+              <p class="mi-desc">Brisket + full rack ribs + smoked chicken + two sides. The family BBQ without leaving home. All vacuum-packed.</p>
+            </div>
+            <div class="mi-right"><div class="mi-price">$148</div></div>
+          </div>
+        </div>
+        <div style="margin-top:32px">
+          <a href="https://xpress.meatsmith.com.sg" target="_blank" class="btn btn-primary">ORDER ON XPRESS →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- shared footer fragment (below menu) -->
+  <div style="border-top:1px solid var(--border);padding:32px 0;background:var(--off-black)">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <p style="font-size:14px;color:var(--grey)">167 Telok Ayer Street, Singapore 068618 · Open daily 11:30am – 10:30pm · +65 6221 2262</p>
+      <button onclick="showPage('reservation')" class="btn btn-primary btn-sm">RESERVE A TABLE</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PAGE: ABOUT
+════════════════════════════ -->
+<div id="page-about" class="page">
+  <section class="about-hero">
+    <div class="container-narrow">
+      <span class="label label-red" style="margin-bottom:24px">ABOUT MEATSMITH</span>
+      <h1 class="about-headline">An American BBQ<br>&amp; <span class="pink">Smokehouse</span><br>with no shortcuts.</h1>
+      <div class="about-grid">
+        <div>
+          <p class="about-body">Meatsmith is the best American BBQ near you in Singapore — a smokehouse built on fire, flavour, and the iconic Southern Pride Smokers that dominate our kitchen. Guests who love the live-fire philosophy of <a href="https://www.burntends.com.sg" target="_blank" rel="noopener" style="color:var(--red)">Burnt Ends</a> at Dempsey often find their way to Meatsmith for a more relaxed, everyday expression of that same craft. These giant smokers, flown in from the US, give our food that unmistakable bold, smoky character that keeps guests coming back for more.</p>
+          <p class="about-body">Step inside and you will find a space alive with energy: an open kitchen, glowing grills, and the buzz of people digging into serious plates of meat. This is BBQ with impact: 1kg T-bone steaks, spit-roasted lamb, juicy racks of ribs, and hickory wood smoked burnt ends cooked low and slow for up to 14 hours.</p>
+          <blockquote class="about-pull">"Think Big, Think Barbecue, Think Meat."</blockquote>
+          <p class="about-body">Our menus are built for sharing — from big platters and sides to chef-tailored feasts designed for celebrations. Our drinks programme pairs perfectly with the food. Think whiskey and bourbon-driven cocktails, strong craft beers, and bold wines that stand up to the smoke and fire.</p>
+          <p class="about-body">Located on Telok Ayer Street in the heart of the CBD, Meatsmith's industrial casual space seats up to 70 guests across indoor and outdoor areas. With warm lighting, steel finishes, large specials boards, and a straight-talking service style — it is an atmosphere that is relaxed, gutsy, and built for a good time.</p>
+        </div>
+        <div>
+          <div class="about-facts">
+            <div class="about-fact"><div class="af-label">OPENED</div><div class="af-val">2015 — Telok Ayer Street, Singapore</div></div>
+            <div class="about-fact"><div class="af-label">SINCE</div><div class="af-val">Operating since 2015, Meatsmith is run by an experienced Singapore hospitality team with deep roots in the city's live-fire dining scene.</div></div>
+            <div class="about-fact"><div class="af-label">CUISINE</div><div class="af-val">American BBQ &amp; Smokehouse — hickory and mesquite wood, Southern Pride smokers, live-fire elevation grills</div></div>
+            <div class="about-fact"><div class="af-label">LOCATION</div><div class="af-val">167 Telok Ayer Street, Singapore 068618<br>3 min from Telok Ayer MRT (DT18)</div></div>
+            <div class="about-fact"><div class="af-label">HOURS</div><div class="af-val">Monday – Sunday: 11:30am – 10:30pm<br>Kitchen closes at 10:00pm</div></div>
+            <div class="about-fact"><div class="af-label">CONTACT</div><div class="af-val">+65 6221 2262 · eat@meatsmith.com.sg<br>Catering: eat@meatsmith.com.sg</div></div>
+          </div>
+          <div style="margin-top:32px;display:flex;gap:10px;flex-wrap:wrap">
+            <button onclick="showPage('reservation')" class="btn btn-primary btn-sm">RESERVE A TABLE</button>
+            <button onclick="showPage('menu')" class="btn btn-outline btn-sm">VIEW THE MENU</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section — FAQPage schema goes in <head> -->
+  <section class="faq-section">
+    <div class="container-narrow">
+      <span class="label label-red" style="margin-bottom:20px">FREQUENTLY ASKED QUESTIONS</span>
+      <h2 style="font-family:var(--ff-disp);font-weight:900;font-size:clamp(28px,4vw,52px);color:var(--white);letter-spacing:-0.02em;margin-bottom:40px">Common questions</h2>
+      <div id="faqList">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Where is Meatsmith located?<span class="icon">+</span></div>
+          <div class="faq-a">We are at 167 Telok Ayer Street, Singapore 068618. The nearest MRT stations are Telok Ayer (Downtown Line, 3-minute walk) and Tanjong Pagar (East-West Line, 7-minute walk).</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What type of BBQ does Meatsmith serve?<span class="icon">+</span></div>
+          <div class="faq-a">We serve American-style BBQ — low-and-slow smoked meats cooked over hickory and mesquite wood. Our specialties are 14-hour beef brisket, hickory pork ribs, wagyu cheeseburgers, whole smoked chicken and a 1KG T-Bone steak cooked on our live-fire wood elevation grill.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is Meatsmith related to Burnt Ends?<span class="icon">+</span></div>
+          <div class="faq-a">Meatsmith and Burnt Ends share a passion for live-fire cooking and quality ingredients, and some team members have worked across both kitchens over the years. Meatsmith is its own concept — a distinct menu, a distinct identity, and a distinct dining experience built specifically around American BBQ smokehouse culture.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Does Meatsmith offer BBQ catering in Singapore?<span class="icon">+</span></div>
+          <div class="faq-a">Yes — we cater for corporate events, private parties, weddings and team gatherings across Singapore. We offer live-fire cooking stations, smoked platters, grazing tables and bespoke menus. Contact us at eat@meatsmith.com.sg.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Do I need a reservation?<span class="icon">+</span></div>
+          <div class="faq-a">We welcome walk-ins daily, but reservations are strongly recommended on weekends and for groups of 4 or more. Book online at meatsmith.com.sg/reservation/ or call +65 6221 2262.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is Meatsmith halal-certified?<span class="icon">+</span></div>
+          <div class="faq-a">Meatsmith is not halal-certified. We serve pork and alcohol. We are unable to accommodate halal dietary requirements. We apologise to guests for whom this applies.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Does Meatsmith do delivery in Singapore?<span class="icon">+</span></div>
+          <div class="faq-a">Yes — we offer BBQ delivery and self pick-up through Meatsmith Xpress at xpress.meatsmith.com.sg. Available daily for same-day and next-day delivery across Singapore.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is Meatsmith the best BBQ near me in Singapore?<span class="icon">+</span></div>
+          <div class="faq-a">Meatsmith at 167 Telok Ayer Street is one of Singapore's most highly rated American BBQ and smokehouse restaurants. We serve 14-hour hickory smoked brisket, pork ribs, wagyu burgers and premium sharing platters. Just 3 minutes from Telok Ayer MRT and 7 minutes from Tanjong Pagar MRT.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Does Meatsmith offer BBQ and barbecue catering in Singapore?<span class="icon">+</span></div>
+          <div class="faq-a">Yes — Meatsmith provides full barbecue catering services across Singapore for corporate events, weddings and private parties. We bring our live-fire cooking and smoked meats directly to your venue. Contact eat@meatsmith.com.sg for catering enquiries.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What is the best American BBQ smokehouse near me in Singapore?<span class="icon">+</span></div>
+          <div class="faq-a">For American BBQ near me in Singapore, Meatsmith on Telok Ayer Street is the answer — operating since 2015 with an experienced live-fire kitchen team. We smoke our meats for up to 14 hours on Southern Pride smokers flown in from the US.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What is the Tasting Flight experience?<span class="icon">+</span></div>
+          <div class="faq-a">The Meatsmith Tasting Flight is $48 for four pairings — each pairing a different drink (bourbon, wine, lager, or iced tea) with a food item from our menu. Available all-day on Saturdays and Sundays. No reservation required — walk-ins welcome.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="border-top:1px solid var(--border);padding:48px 0;background:var(--off-black)">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+      <div><h3 style="font-family:var(--ff-disp);font-weight:900;font-size:24px;color:var(--white);margin-bottom:6px">Ready to visit?</h3><p style="font-size:14px;color:var(--grey)">167 Telok Ayer Street · Open daily from 11:30am</p></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button onclick="showPage('reservation')" class="btn btn-primary">RESERVE A TABLE</button>
+        <button onclick="showPage('menu')" class="btn btn-outline">VIEW MENU</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PAGE: EXPERIENCE
+════════════════════════════ -->
+<div id="page-experience" class="page">
+  <div class="exp-hero">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:20px">EXPERIENCES · /experience/</span>
+      <div class="exp-hero-inner">
+        <div class="exp-hero-content">
+          <h1 class="exp-title">MEATSMITH<br>EXPERIENCES</h1>
+          <p class="exp-body">Two ways to experience Meatsmith beyond the everyday menu — a weekly tasting flight pairing drinks with smoked meats, and the Fire Feast, a communal spread for groups of 8 or more.</p>
+        </div>
+        <div class="exp-hero-visual">
+          <div class="exp-vis-text">TASTE</div>
+          <div class="exp-vis-badge">
+            <div class="exp-vis-badge-val">$48</div>
+            <div class="exp-vis-badge-lbl">TASTING FLIGHT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="exp-section">
+    <div class="container">
+      <div class="exp-section-grid">
+        <div>
+          <span class="label label-red" style="margin-bottom:16px">EVERY WEEKEND</span>
+          <h2 class="exp-section-title">Meatsmith's<br>Tasting Flight</h2>
+          <p class="exp-body" style="margin-top:16px">Bold Southern flavours paired with easy-drinking favourites. Four distinct drink and food pairings, each drawing from American barbecue traditions across regions — from the coasts to the Deep South, brought together in one flight.</p>
+          <p class="exp-body">From coastal seafood and iced tea culture, to Texas brisket with a modern wine pairing, to border-style barbecue influences and Southern comfort classics, each pairing brings a different expression of American barbecue to the table.</p>
+          <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap">
+            <button onclick="showPage('reservation')" class="btn btn-primary">RESERVE A TABLE</button>
+          </div>
+        </div>
+        <div>
+          <div class="exp-includes">
+            <div class="exp-include">Southern Iced Tea — Crab Cake</div>
+            <div class="exp-include">White Wine — Brisket Skewer</div>
+            <div class="exp-include">Lager — Pork Belly Taco</div>
+            <div class="exp-include">Pickle Back — Fried Chix Cornbread</div>
+          </div>
+          <div class="pairings-grid">
+            <div class="pairing-card"><div class="pc-icon">🍵</div><div class="pc-drink">Southern Iced Tea</div><div class="pc-food">+ Crab Cake</div></div>
+            <div class="pairing-card"><div class="pc-icon">🍷</div><div class="pc-drink">White Wine</div><div class="pc-food">+ Brisket Skewer</div></div>
+            <div class="pairing-card"><div class="pc-icon">🍺</div><div class="pc-drink">Lager</div><div class="pc-food">+ Pork Belly Taco</div></div>
+            <div class="pairing-card"><div class="pc-icon">🥃</div><div class="pc-drink">Pickle Back Shot</div><div class="pc-food">+ Fried Chix Cornbread</div></div>
+          </div>
+          <div style="margin-top:20px;border:1px solid var(--border);padding:20px 24px">
+            <div style="font-family:var(--ff-disp);font-weight:900;font-size:28px;color:var(--white)">$48 <span style="font-size:14px;font-weight:300;color:var(--grey)">for 4 pairings</span></div>
+            <div style="font-size:13px;color:var(--grey);margin-top:6px">Saturdays &amp; Sundays, all day · Walk-ins welcome · No reservation required</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="exp-section" style="background:var(--off-black)">
+    <div class="container">
+      <div class="exp-section-grid">
+        <div>
+          <span class="label label-red" style="margin-bottom:16px">FROM 1 MARCH 2026 · GROUPS 8+</span>
+          <h2 class="exp-section-title">Can You Handle<br>The Heat?<br><span style="color:var(--red)">Fire Feast.</span></h2>
+          <p class="exp-body" style="margin-top:16px">Fire-driven meats and Southern sides come together in a communal spread built for sharing, with bold flavours across every dish.</p>
+          <p class="exp-body">A Build Your Own Brisket Set, Cajun Rib, Stuffed Jambalaya Wings, and more. Available from 1 March 2026. Fire Feast is by reservation only with an 8 minimum pax requirement.</p>
+          <div style="margin-top:28px">
+            <div class="fire-feast-details">
+              <div class="ffd-row"><div class="ffd-label">AVAILABLE</div><div class="ffd-val">From 1 March 2026</div></div>
+              <div class="ffd-row"><div class="ffd-label">MIN PAX</div><div class="ffd-val">8 guests minimum</div></div>
+              <div class="ffd-row"><div class="ffd-label">BOOKING</div><div class="ffd-val">Reservation required — email <a href="mailto:Eat@meatsmith.com.sg" style="color:var(--red)">Eat@meatsmith.com.sg</a></div></div>
+              <div class="ffd-row"><div class="ffd-label">INCLUDES</div><div class="ffd-val">Build Your Own Brisket Set · Cajun Rib · Stuffed Jambalaya Wings · Communal sides · Dessert</div></div>
+            </div>
+          </div>
+          <div style="margin-top:20px">
+            <a href="mailto:Eat@meatsmith.com.sg" class="btn btn-red">EMAIL TO BOOK FIRE FEAST</a>
+          </div>
+        </div>
+        <div style="background:var(--dark);display:flex;align-items:center;justify-content:center;min-height:360px;position:relative;overflow:hidden">
+          <div style="font-family:var(--ff-disp);font-weight:900;font-size:120px;color:rgba(198,0,85,0.08);letter-spacing:-0.04em;line-height:1">FIRE</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="border-top:1px solid var(--border);padding:48px 0">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <p style="font-size:14px;color:var(--grey)">167 Telok Ayer Street · Saturdays &amp; Sundays, all day · Walk-ins welcome</p>
+      <button onclick="showPage('reservation')" class="btn btn-primary btn-sm">RESERVE A TABLE</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PAGE: HAPPENINGS
+════════════════════════════ -->
+<div id="page-happenings" class="page">
+
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <div class="happ-hero">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:14px">HAPPENINGS &amp; STORIES · /happenings/</span>
+      <h1 class="section-title-lg">EVENTS &amp;<br><span class="outline">STORIES</span></h1>
+      <p style="font-size:15px;color:var(--grey);margin-top:16px;max-width:540px;line-height:1.75">Upcoming events, chef collaborations, wine dinners and cultural takeovers — plus stories from behind the pit. Everything that happens at Meatsmith Telok Ayer, in one place.</p>
+    </div>
+  </div>
+
+  <!-- ─── TAB BAR — switches between Upcoming Events and Stories ── -->
+  <div style="border-bottom:1px solid var(--border);background:var(--off-black);position:sticky;top:64px;z-index:100;display:flex">
+    <button class="menu-tab active" id="happ-tab-events" onclick="switchHappTab('events')" style="padding:16px 28px">UPCOMING EVENTS</button>
+    <button class="menu-tab" id="happ-tab-stories" onclick="switchHappTab('stories')" style="padding:16px 28px">FROM THE PIT — STORIES</button>
+  </div>
+
+  <!-- ─── UPCOMING EVENTS ──────────────────────────────────── -->
+  <div id="happ-events" class="happ-events">
+    <div class="container">
+
+      <!-- Korean Takeover — Event schema: add to <head> with date 2026-05-24 -->
+      <div class="happ-event">
+        <div class="he-date-block">
+          <div class="he-day">24</div>
+          <div class="he-month">MAY</div>
+          <div class="he-year">2026</div>
+        </div>
+        <div>
+          <div class="he-tag">CHEF COLLABORATION</div>
+          <h2 class="he-title">The Korean Takeover</h2>
+          <div class="he-sub">SUNDAY 24 MAY 2026 · FROM 5:30PM TILL LATE</div>
+          <p class="he-body">In Korean, there's a word for <span class="he-highlight">the taste of fire, "bul-mat."</span> A flavour so distinct, it needs a name of its own. On 24 May 2026, Meatsmith brings Korea's culture of fire and char to the pit, where smoke, marinade, and flame define every cut.</p>
+          <p class="he-body" style="margin-top:12px">The Korean Takeover brings together Korean kitchen talent, including <span class="he-highlight">Seongjin Lee</span>, as they take the reins for one night. Expect Meatsmith's signature American barbecue layered with Korean flavours — marinades built on soy, garlic, sesame, and fermented pastes.</p>
+        </div>
+        <div class="he-cta-col">
+          <a href="https://www.weeloy.com/modules/event_booking/event.php?restaurant=SG_SG_R_MtsTelokAyer&event_id=337912060861043" target="_blank" class="btn btn-primary btn-sm">MAKE RESERVATIONS</a>
+          <a href="https://meatsmith.com.sg/wp-content/uploads/2026/04/The-Korean-Takeover-2026-Food-Menu.pdf" target="_blank" class="btn btn-outline btn-sm">VIEW MENU (PDF)</a>
+        </div>
+      </div>
+
+      <!-- Mother's Day — Event schema: add to <head> with date 2026-05-10 -->
+      <div class="happ-event">
+        <div class="he-date-block">
+          <div class="he-day">10</div>
+          <div class="he-month">MAY</div>
+          <div class="he-year">2026</div>
+        </div>
+        <div>
+          <div class="he-tag">SPECIAL OCCASION</div>
+          <h2 class="he-title">For Mum, From the Pit</h2>
+          <div class="he-sub">SUNDAY 10 MAY 2026 · MOTHER'S DAY</div>
+          <p class="he-body">Mother's Day is best spent around the table. Good food, the people who matter, and Mum not lifting a finger for once.</p>
+          <p class="he-body" style="margin-top:12px">Order Meatsmith's <span class="he-highlight">Premium Platter</span> and we'll sort the rest. Mum gets a little extra on us — a Petite Four, a roasted marshmallow, and a glass of sparkling wine or a cocktail.</p>
+        </div>
+        <div class="he-cta-col">
+          <a href="https://www.weeloy.com/modules/booking/book_form_section.php?redirect=1&bkrestaurant=SG_SG_R_MtsTelokAyer" target="_blank" class="btn btn-primary btn-sm">MAKE RESERVATIONS</a>
+        </div>
+      </div>
+
+      <!-- Catena Zapata -->
+      <div class="happ-event">
+        <div class="he-date-block">
+          <div class="he-day">23</div>
+          <div class="he-month">APR</div>
+          <div class="he-year">2026</div>
+        </div>
+        <div>
+          <div class="he-tag">WINE EVENING</div>
+          <h2 class="he-title">Catena Zapata at Meatsmith</h2>
+          <div class="he-sub">THURSDAY 23 APRIL 2026 · FROM 6PM TILL LATE</div>
+          <p class="he-body">A laid-back evening with <span class="he-highlight">Catena Zapata</span>, one of Argentina's most influential wine producers and a name that helped put Malbec on the world stage.</p>
+          <p class="he-body" style="margin-top:12px">No formal wine dinner. No fixed structure. Just a free-flowing walkthrough of their wines alongside Meatsmith's signature barbecue fresh off the pit. Move at your own pace, explore the lineup.</p>
+        </div>
+        <div class="he-cta-col">
+          <a href="https://www.restaurants.sg/modules/booking/book_form_section.php?bkrestaurant=SG_SG_R_MtsTelokAyer" target="_blank" class="btn btn-primary btn-sm">MAKE RESERVATIONS</a>
+        </div>
+      </div>
+
+      <!-- Corporate / catering band -->
+      <div class="corporate-band">
+        <div class="corp-grid">
+          <div>
+            <div class="he-tag" style="margin-bottom:10px">CORPORATE EVENTS &amp; PRIVATE DINING</div>
+            <div class="corp-title">Meatsmith is here for your corporate event.</div>
+            <p class="corp-body">Dine-in private events, online orders &amp; pick-up. Whether you're planning a corporate party, team gathering, or need the perfect food and drink package, Meatsmith has you covered.</p>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <button onclick="showPage('reservation')" class="btn btn-primary btn-sm">DINE-IN RESERVATIONS</button>
+            <button onclick="showPage('catering')" class="btn btn-outline btn-sm">PRIVATE EVENTS</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── FROM THE PIT — STORIES / BLOG ────────────────────── -->
+  <!--
+    SEO NOTE: In WordPress, each of these cards is a Post in the
+    "Happenings" category. URL structure: /happenings/post-slug/
+    Two types:
+      • EVENT RECAP  — published within 48hrs of each event ending
+      • SEO GUIDE    — evergreen keyword-targeted articles (2/month)
+    Both live at /happenings/ so the page builds authority over time.
+  -->
+  <div id="happ-stories" style="display:none">
+    <div class="container">
+
+      <div class="stories-section">
+
+        <!-- Section header -->
+        <div class="stories-hdr">
+          <div>
+            <span class="label label-red" style="margin-bottom:12px">FROM THE PIT</span>
+            <h2 class="section-title-lg" style="font-size:clamp(32px,4.5vw,64px)">STORIES &amp;<br><span class="outline">GUIDES</span></h2>
+          </div>
+          <div style="text-align:right">
+            <p style="font-size:13px;color:var(--grey);margin-bottom:12px;max-width:260px;line-height:1.6">New posts every month — event recaps, smoking guides and BBQ stories from Telok Ayer.</p>
+            <div style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" style="border-color:var(--red);color:var(--red)" onclick="filterStories('all',this)">ALL</button>
+              <button class="btn btn-outline btn-sm" onclick="filterStories('recap',this)">EVENT RECAPS</button>
+              <button class="btn btn-outline btn-sm" onclick="filterStories('guide',this)">BBQ GUIDES</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="stories-grid" id="storiesGrid">
+
+          <!-- ── FEATURED POST — most recent, full width ───────────── -->
+          <!--
+            WordPress: this is your most recent post. Use a "Featured Post" 
+            plugin or Elementor widget to always show the latest one here.
+            URL will be: /happenings/korean-takeover-recap-may-2026/
+          -->
+          <article class="story-card story-card-featured" data-type="recap">
+            <div class="sc-content">
+              <div>
+                <span class="sc-pill sc-pill-recap">EVENT RECAP</span>
+                <span class="sc-category">CHEF COLLABORATION · MAY 2026</span>
+                <h2 class="sc-title">The Korean Takeover: A Night of Fire and Seoul at Meatsmith Telok Ayer</h2>
+                <p class="sc-excerpt">On 24 May, the pit leaned Korean. Seongjin Lee brought "bul-mat" — the taste of fire — to Meatsmith for one night. Gochujang-glazed brisket, kimchi-brined smoked chicken, and a room that stayed till late. Here's what happened.</p>
+              </div>
+              <div class="sc-meta">
+                <span class="sc-date">25 MAY 2026</span>
+                <div class="sc-sep"></div>
+                <span class="sc-date">5 MIN READ</span>
+                <div class="sc-sep"></div>
+                <span class="sc-read">READ THE STORY →</span>
+              </div>
+            </div>
+            <div class="sc-visual">
+              <div class="sc-visual-txt">FIRE</div>
+              <!-- In production: replace this div with an <img> of the event -->
+            </div>
+          </article>
+
+          <!-- ── SEO GUIDE: How we smoke brisket ───────────────────── -->
+          <!--
+            WordPress URL: /happenings/how-we-smoke-brisket-14-hours/
+            Target keyword: "brisket near me" (500/mo) + "best brisket in singapore" (50/mo)
+            Publish: Month 2
+          -->
+          <article class="story-card" data-type="guide">
+            <span class="sc-pill sc-pill-guide">BBQ GUIDE</span>
+            <span class="sc-category">CRAFT &amp; TECHNIQUE</span>
+            <h2 class="sc-title">How We Smoke Brisket for 14 Hours: The Meatsmith Method</h2>
+            <p class="sc-excerpt">It starts at 11pm. By the time we slice it the next afternoon, the brisket has been at 107°C for 14 hours. Here's what happens inside the smoker — and why we wouldn't change a thing.</p>
+            <div class="sc-meta">
+              <span class="sc-date">MAY 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">7 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read">READ →</span>
+            </div>
+          </article>
+
+          <!-- ── SEO GUIDE: Best BBQ Singapore CBD ─────────────────── -->
+          <!--
+            WordPress URL: /happenings/best-bbq-restaurants-singapore-cbd/
+            Target keyword: "best bbq in singapore" (500/mo, Medium)
+            Publish: Month 2
+          -->
+          <article class="story-card" data-type="guide">
+            <span class="sc-pill sc-pill-guide">BBQ GUIDE</span>
+            <span class="sc-category">SINGAPORE FOOD GUIDE</span>
+            <h2 class="sc-title">Best BBQ Restaurants in Singapore CBD: An Honest Guide</h2>
+            <p class="sc-excerpt">We're biased — but we've eaten everywhere. Here's our honest take on where to get proper smoked meats in Singapore's CBD, who does what well, and why location matters more than most guides admit.</p>
+            <div class="sc-meta">
+              <span class="sc-date">MAY 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">6 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read">READ →</span>
+            </div>
+          </article>
+
+          <!-- ── EVENT RECAP: Catena Zapata ────────────────────────── -->
+          <!--
+            WordPress URL: /happenings/catena-zapata-wine-evening-april-2026/
+            Target keyword: "american bbq singapore", "best restaurants singapore"
+            Publish: within 48hrs of event
+          -->
+          <article class="story-card" data-type="recap">
+            <span class="sc-pill sc-pill-recap">EVENT RECAP</span>
+            <span class="sc-category">WINE EVENING · APRIL 2026</span>
+            <h2 class="sc-title">Catena Zapata at Meatsmith: Malbec, Smoke and an Easy Night Out</h2>
+            <p class="sc-excerpt">Argentina's most influential winery met Telok Ayer's smokehouse. No fixed structure, no formal seats — just five wines poured throughout the night alongside brisket fresh off the pit.</p>
+            <div class="sc-meta">
+              <span class="sc-date">24 APR 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">4 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read">READ →</span>
+            </div>
+          </article>
+
+          <!-- ── SEO GUIDE: Corporate BBQ catering ─────────────────── -->
+          <!--
+            WordPress URL: /happenings/how-to-plan-corporate-bbq-event-singapore/
+            Target keyword: "corporate bbq catering" (50/mo, High competition)
+            Publish: Month 3
+          -->
+          <article class="story-card" data-type="guide">
+            <span class="sc-pill sc-pill-guide">BBQ GUIDE</span>
+            <span class="sc-category">CORPORATE EVENTS</span>
+            <h2 class="sc-title">How to Plan a Corporate BBQ Event in Singapore</h2>
+            <p class="sc-excerpt">Team bonding, client dinners, award nights. Corporate BBQ in Singapore has moved well past sausages on a grill. Here's what to plan for, what to ask your caterer, and how live fire changes everything.</p>
+            <div class="sc-meta">
+              <span class="sc-date">COMING JUNE 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">8 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read" style="color:var(--grey)">COMING SOON</span>
+            </div>
+          </article>
+
+          <!-- ── SEO GUIDE: American vs Korean BBQ ─────────────────── -->
+          <!--
+            WordPress URL: /happenings/american-bbq-vs-korean-bbq-meatsmith/
+            Target keyword: "american bbq singapore" (500/mo, Medium)
+            Publish: Month 3
+          -->
+          <article class="story-card" data-type="guide">
+            <span class="sc-pill sc-pill-guide">BBQ GUIDE</span>
+            <span class="sc-category">FOOD &amp; CULTURE</span>
+            <h2 class="sc-title">American BBQ vs Korean BBQ: What Makes Meatsmith Different</h2>
+            <p class="sc-excerpt">Two cultures, one obsession with fire. After the Korean Takeover showed just how well these worlds collide, we break down what separates low-and-slow American smoking from Korean direct-heat grilling — and why the best BBQ borrows from both.</p>
+            <div class="sc-meta">
+              <span class="sc-date">COMING JUNE 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">6 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read" style="color:var(--grey)">COMING SOON</span>
+            </div>
+          </article>
+
+          <!-- ── SEO GUIDE: Smoked meats delivery ──────────────────── -->
+          <!--
+            WordPress URL: /happenings/smoked-meats-delivery-singapore/
+            Target keyword: "bbq delivery singapore" (500/mo, High)
+            Publish: Month 4
+          -->
+          <article class="story-card" data-type="guide">
+            <span class="sc-pill sc-pill-guide">BBQ GUIDE</span>
+            <span class="sc-category">DELIVERY &amp; TAKEAWAY</span>
+            <h2 class="sc-title">Smoked Meats Delivery in Singapore: What You Need to Know</h2>
+            <p class="sc-excerpt">Getting proper smoked BBQ delivered in Singapore without it going cold or soggy takes more planning than most people realise. Here's how Meatsmith Xpress does it, and what to look for when ordering smoked meats for delivery.</p>
+            <div class="sc-meta">
+              <span class="sc-date">COMING JULY 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">5 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read" style="color:var(--grey)">COMING SOON</span>
+            </div>
+          </article>
+
+          <!-- ── SEO GUIDE: Bourbon & BBQ ───────────────────────────── -->
+          <!--
+            WordPress URL: /happenings/bourbon-bbq-pairing-guide-smoked-meats/
+            Target keyword: "best bbq singapore" (500/mo)
+            Publish: Month 4
+          -->
+          <article class="story-card" data-type="guide">
+            <span class="sc-pill sc-pill-guide">BBQ GUIDE</span>
+            <span class="sc-category">DRINKS &amp; PAIRINGS</span>
+            <h2 class="sc-title">Bourbon and BBQ: How to Pair Whiskey with Smoked Meats</h2>
+            <p class="sc-excerpt">Our bar team runs the Meatsmith Tasting Flight every weekend — four drink and food pairings that have taught us a lot about what works. The short answer: high-rye bourbons with brisket, wheated with ribs. Here's the long answer.</p>
+            <div class="sc-meta">
+              <span class="sc-date">COMING JULY 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">6 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read" style="color:var(--grey)">COMING SOON</span>
+            </div>
+          </article>
+
+          <!-- ── SEO GUIDE: Group dining Telok Ayer ────────────────── -->
+          <!--
+            WordPress URL: /happenings/group-dining-telok-ayer-guide-2026/
+            Target keyword: "steak telok ayer" (500/mo) + "bbq restaurants near me" (500/mo)
+            Publish: Month 5
+          -->
+          <article class="story-card" data-type="guide">
+            <span class="sc-pill sc-pill-guide">BBQ GUIDE</span>
+            <span class="sc-category">SINGAPORE FOOD GUIDE</span>
+            <h2 class="sc-title">Group Dining in Telok Ayer: The Complete Guide for 2026</h2>
+            <p class="sc-excerpt">Telok Ayer has become one of Singapore's most interesting restaurant streets. Here's where to bring a group of 6 or more — what each restaurant does well, what to book in advance, and why the platters at Meatsmith are the safest choice for any crowd.</p>
+            <div class="sc-meta">
+              <span class="sc-date">COMING AUG 2026</span>
+              <div class="sc-sep"></div>
+              <span class="sc-date">7 MIN READ</span>
+              <div class="sc-sep"></div>
+              <span class="sc-read" style="color:var(--grey)">COMING SOON</span>
+            </div>
+          </article>
+
+        </div><!-- /stories-grid -->
+
+        <!-- Newsletter / follow CTA -->
+        <div style="margin-top:64px;border:1px solid var(--border);padding:48px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center">
+          <div>
+            <span class="label label-red" style="margin-bottom:10px">STAY IN THE LOOP</span>
+            <h3 style="font-family:var(--ff-disp);font-weight:900;font-size:clamp(20px,2.5vw,32px);color:var(--white);line-height:0.95;margin-bottom:10px">New stories &amp; events,<br>every month.</h3>
+            <p style="font-size:14px;color:var(--grey);max-width:400px;line-height:1.7">Follow <a href="https://instagram.com/meatsmith.sg" target="_blank" rel="noopener" style="color:var(--red)">@meatsmith.sg on Instagram</a> for the fastest updates, or check back here monthly for new guides and event recaps.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0">
+            <a href="https://instagram.com/meatsmith.sg" target="_blank" rel="noopener" class="btn btn-primary btn-sm">FOLLOW ON INSTAGRAM</a>
+            <button onclick="showPage('reservation')" class="btn btn-outline btn-sm">RESERVE A TABLE</button>
+          </div>
+        </div>
+
+      </div><!-- /stories-section -->
+    </div><!-- /container -->
+  </div><!-- /happ-stories -->
+
+</div><!-- /page-happenings -->
+
+<!-- ════════════════════════════
+     PAGE: CATERING
+     SEO: "bbq catering singapore" 500/mo, "corporate bbq catering" 50/mo
+     KPI: Catering Clicks 5 → 40/mo
+════════════════════════════ -->
+<div id="page-catering" class="page">
+  <div class="cat-hero">
+    <div class="container">
+      <span class="label" style="color:rgba(255,255,255,0.6);margin-bottom:20px">BBQ CATERING · SINGAPORE</span>
+      <div class="cat-hero-inner">
+        <div class="cat-hero-content">
+          <h1 class="cat-hero-title">EVENTS &amp;<br>CATERING</h1>
+          <p class="cat-hero-body">Welcome to Meatsmith Catering — where we combine the art of meat with the craft of cooking. Live-fire cooking techniques, bespoke menus and exceptional service for events of all sizes across Singapore.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button onclick="document.getElementById('catFormSection').scrollIntoView({behavior:'smooth'})" class="btn-wh btn">SEND AN ENQUIRY</button>
+            <a href="https://meatsmith.com.sg/wp-content/uploads/2025/02/A5-MS-Event-Menus.pdf" target="_blank" class="btn-owh btn">OFFSITE MENUS (PDF)</a>
+          </div>
+        </div>
+        <div class="cat-hero-vis">
+          <div class="cat-vis-num">200</div>
+          <div class="cat-vis-badge">
+            <div class="cat-badge-num">$3.5K</div>
+            <div class="cat-badge-lbl">FROM · EXCLUSIVE LUNCH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event types -->
+  <div class="container" style="padding:72px 0">
+    <span class="label label-red" style="margin-bottom:20px">WHAT WE CATER</span>
+    <h2 class="section-title-lg" style="margin-bottom:48px">EVERY<br><span class="outline">EVENT</span></h2>
+    <div class="cat-types">
+      <div class="cat-type"><div class="ct-icon">🏢</div><h3 class="ct-title">Corporate Events</h3><p class="ct-body">CBD offices, galas, team bonding sessions, award nights and client entertaining. We come to your venue.</p></div>
+      <div class="cat-type"><div class="ct-icon">💍</div><h3 class="ct-title">Weddings</h3><p class="ct-body">Bespoke menus tailored to your brief. Dedicated service team. Live-fire cooking stations as a centrepiece.</p></div>
+      <div class="cat-type"><div class="ct-icon">🎉</div><h3 class="ct-title">Private Parties</h3><p class="ct-body">Birthdays, farewells, anniversaries, reunions. Casual BBQ to formal seated dinners — we adapt.</p></div>
+      <div class="cat-type"><div class="ct-icon">🔥</div><h3 class="ct-title">Live Fire Stations</h3><p class="ct-body">On-site carving, live brisket slicing, whole animal roasts and fire theatre — a visual experience as much as a meal.</p></div>
+    </div>
+  </div>
+
+  <!-- Why Meatsmith catering -->
+  
+  <!-- Real private event buyout pricing from Sales Kit -->
+  <div style="padding:72px 0 0;border-top:1px solid var(--border)">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:16px">PRIVATE EVENT BUYOUTS</span>
+      <h2 class="section-title-lg" style="font-size:clamp(28px,4vw,56px);margin-bottom:40px">EXCLUSIVE<br><span class="outline">VENUE HIRE</span></h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:16px">
+        <div style="background:var(--off-black);padding:36px">
+          <div style="font-family:var(--ff-disp);font-size:10px;letter-spacing:0.22em;color:var(--red);margin-bottom:16px">EXCLUSIVE LUNCH</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px"><span style="color:var(--white)">Indoor — Sun to Wed</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$3,500++</span></div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px"><span style="color:var(--white)">Whole Venue — Sun to Wed</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$5,000++</span></div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px"><span style="color:var(--white)">Indoor — Thu to Sat</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$4,000++</span></div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:14px"><span style="color:var(--white)">Whole Venue — Thu to Sat</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$6,000++</span></div>
+          </div>
+        </div>
+        <div style="background:var(--off-black);padding:36px">
+          <div style="font-family:var(--ff-disp);font-size:10px;letter-spacing:0.22em;color:var(--red);margin-bottom:16px">EXCLUSIVE DINNER</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px"><span style="color:var(--white)">Indoor — Sun to Wed</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$6,000++</span></div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px"><span style="color:var(--white)">Whole Venue — Sun to Wed</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$8,000++</span></div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px"><span style="color:var(--white)">Indoor — Thu to Sat</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$10,000++</span></div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:14px"><span style="color:var(--white)">Whole Venue — Thu to Sat</span><span style="font-family:var(--ff-disp);font-weight:700;color:var(--white)">$12,000++</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:40px">
+        <div style="background:var(--dark);padding:24px;text-align:center"><div style="font-family:var(--ff-disp);font-weight:900;font-size:28px;color:var(--white);line-height:1">50</div><div style="font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--grey);margin-top:6px">INDOOR SEATED</div></div>
+        <div style="background:var(--dark);padding:24px;text-align:center"><div style="font-family:var(--ff-disp);font-weight:900;font-size:28px;color:var(--white);line-height:1">70</div><div style="font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--grey);margin-top:6px">INDOOR STANDING</div></div>
+        <div style="background:var(--dark);padding:24px;text-align:center"><div style="font-family:var(--ff-disp);font-weight:900;font-size:28px;color:var(--white);line-height:1">75</div><div style="font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--grey);margin-top:6px">IN+OUT SEATED</div></div>
+        <div style="background:var(--dark);padding:24px;text-align:center"><div style="font-family:var(--ff-disp);font-weight:900;font-size:28px;color:var(--white);line-height:1">120</div><div style="font-family:var(--ff-disp);font-size:9px;letter-spacing:0.2em;color:var(--grey);margin-top:6px">IN+OUT STANDING</div></div>
+      </div>
+      <p style="font-size:13px;color:var(--grey)">*Prices subject to change. All dine-in &amp; catering prices subject to 10% service charge &amp; 9% GST.</p>
+    </div>
+  </div>
+
+<div class="cat-why">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:20px">WHY CHOOSE US</span>
+      <h2 class="section-title-lg" style="margin-bottom:0">THE<br><span class="outline">DIFFERENCE</span></h2>
+      <div class="why-grid">
+        <div class="why-item"><div class="wi-num">01</div><div class="wi-title">Live Fire at Your Venue</div><div class="wi-body">We bring the pit, the smokers and the fire to you. Guests watch their food cooked in front of them — a spectacle that turns a meal into an experience.</div></div>
+        <div class="why-item"><div class="wi-num">02</div><div class="wi-title">Experienced Kitchen Team</div><div class="wi-body">Our team brings deep experience from Singapore's top live-fire kitchens. The same high standard of cooking and service you would expect from a premium restaurant, delivered to your event.</div></div>
+        <div class="why-item"><div class="wi-num">03</div><div class="wi-title">Fully Bespoke Menus</div><div class="wi-body">We understand every event is unique. We work closely with you to tailor menus to your brief, from formal sit-down dinners to casual BBQs and grazing tables.</div></div>
+        <div class="why-item"><div class="wi-num">04</div><div class="wi-title">Full Service</div><div class="wi-body">Setup, service, breakdown — all handled. Our attention to detail and personalised service ensures your event runs flawlessly, letting you focus on your guests.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="cat-process">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:20px">HOW IT WORKS</span>
+      <h2 class="section-title-lg" style="margin-bottom:0">THE<br><span class="outline">PROCESS</span></h2>
+      <div class="process-steps">
+        <div class="proc-s"><div class="ps-step">STEP 01</div><div class="ps-title">Send an Enquiry</div><div class="ps-body">Fill in the form below with your event details — date, guest count, type of event and any special requirements.</div></div>
+        <div class="proc-s"><div class="ps-step">STEP 02</div><div class="ps-title">We Get in Touch</div><div class="ps-body">Our events team contacts you within 48 hours to discuss your brief, the venue and menu options.</div></div>
+        <div class="proc-s"><div class="ps-step">STEP 03</div><div class="ps-title">Custom Proposal</div><div class="ps-body">We prepare a tailored menu proposal and quote based on your requirements. Revisions included.</div></div>
+        <div class="proc-s"><div class="ps-step">STEP 04</div><div class="ps-title">Day of the Event</div><div class="ps-body">Our team arrives early, sets up the kitchen, fires up the pit and delivers a memorable experience.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enquiry form — CRITICAL: replaces mailto link, directly drives Catering Clicks KPI -->
+  <div class="cat-form-section" id="catFormSection">
+    <div class="container">
+      <div class="cat-form-grid">
+        <div>
+          <span class="label label-red" style="margin-bottom:16px">SEND AN ENQUIRY</span>
+          <h2 class="form-title">Let's plan<br>your event.</h2>
+          <p class="form-body">Tell us about your event and our team will get back to you within 48 hours. For urgent enquiries call <a href="tel:+6562212262" style="color:var(--red)">+65 6221 2262</a>.</p>
+          <div class="cat-faq">
+            <div class="cat-faq-title">QUICK ANSWERS</div>
+            <div class="cat-faq-q">What is the minimum guest count?</div>
+            <div class="cat-faq-q">Do you cater outside Singapore?</div>
+            <div class="cat-faq-q">Can you accommodate dietary requirements?</div>
+            <div class="cat-faq-q">How far in advance should I book?</div>
+          </div>
+        </div>
+        <div>
+          <form onsubmit="handleCateringForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">YOUR NAME *</label>
+                <input type="text" class="form-input" placeholder="Full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">COMPANY (OPTIONAL)</label>
+                <input type="text" class="form-input" placeholder="Company name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">EMAIL ADDRESS *</label>
+                <input type="email" class="form-input" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">PHONE NUMBER *</label>
+                <input type="tel" class="form-input" placeholder="+65 xxxx xxxx" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">EVENT TYPE *</label>
+                <select class="form-select" required>
+                  <option value="" disabled selected>Select event type</option>
+                  <option>Corporate event</option>
+                  <option>Wedding</option>
+                  <option>Private party</option>
+                  <option>Team bonding</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">EVENT DATE</label>
+                <input type="date" class="form-input">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">ESTIMATED GUEST COUNT *</label>
+                <select class="form-select" required>
+                  <option value="" disabled selected>Number of guests</option>
+                  <option>Under 30</option>
+                  <option>30 – 50</option>
+                  <option>50 – 100</option>
+                  <option>100 – 200</option>
+                  <option>200+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">BUDGET RANGE</label>
+                <select class="form-select">
+                  <option value="" disabled selected>Approximate budget</option>
+                  <option>Under $2,000</option>
+                  <option>$2,000 – $5,000</option>
+                  <option>$5,000 – $15,000</option>
+                  <option>$15,000+</option>
+                  <option>Flexible / TBD</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">TELL US MORE</label>
+              <textarea class="form-textarea" placeholder="Venue, special requirements, dietary needs, anything else we should know..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">SEND CATERING ENQUIRY →</button>
+            <p style="font-size:12px;color:var(--grey);margin-top:12px;text-align:center">Our team replies within 48 hours. Or email eat@meatsmith.com.sg directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PAGE: RESERVATION
+     KPI: Reservation Clicks 415 → 700/mo
+════════════════════════════ -->
+<div id="page-reservation" class="page">
+  <div class="res-hero">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:14px">RESERVATIONS · /reservation/</span>
+      <h1 class="res-title">RESERVE<br><span style="color:var(--red)">A TABLE</span></h1>
+      <p class="res-sub">Book your table at Meatsmith Telok Ayer. We welcome walk-ins daily from 11:30am, but reservations are recommended on weekends and for groups of 4 or more.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="res-body-grid">
+      <div class="res-info">
+        <div class="res-info-title">Visit Information</div>
+        <!-- NAP must match GBP exactly -->
+        <div class="res-detail"><div class="rd-label">ADDRESS</div><div class="rd-val">167 Telok Ayer Street<br>Singapore 068618</div></div>
+        <div class="res-detail"><div class="rd-label">PHONE</div><div class="rd-val"><a href="tel:+6562212262">+65 6221 2262</a></div></div>
+        <div class="res-detail"><div class="rd-label">HOURS</div><div class="rd-val">Monday – Sunday<br>11:30am – 10:30pm<br><span style="font-size:13px;color:var(--grey)">Kitchen closes 10:00pm</span></div></div>
+        <div class="res-detail"><div class="rd-label">MRT</div><div class="rd-val"><div class="res-mrt"><span>TELOK AYER DT18</span><span>TANJONG PAGAR EW15</span></div></div></div>
+        <div class="res-detail"><div class="rd-label">EMAIL</div><div class="rd-val"><a href="mailto:eat@meatsmith.com.sg">eat@meatsmith.com.sg</a></div></div>
+        <div class="res-detail"><div class="rd-label">PARKING</div><div class="rd-val">Amoy Street Food Centre carpark (2 min walk). Maxwell Road carpark (5 min walk).</div></div>
+
+        <div class="res-private-band">
+          <div class="rpb-title">Groups &amp; Private Events</div>
+          <p class="rpb-body">For groups of 10 or more, or to enquire about the Fire Feast experience or private dining, contact our events team directly.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a href="mailto:eat@meatsmith.com.sg" class="btn btn-outline btn-sm">EMAIL EVENTS TEAM</a>
+            <button onclick="showPage('catering')" class="btn btn-outline btn-sm">CATERING PAGE →</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="res-booking-widget">
+          <div class="rbw-title">Online Reservation</div>
+          <p class="rbw-sub">Book directly through our reservation partner. Instant confirmation.</p>
+          <!-- In production: embed Weeloy/Chope booking widget here -->
+          <div style="border:1px solid var(--border);padding:40px;text-align:center;margin-bottom:20px">
+            <div style="font-family:var(--ff-disp);font-size:11px;letter-spacing:0.2em;color:var(--grey);margin-bottom:16px">BOOKING WIDGET</div>
+            <p style="font-size:13px;color:var(--grey);margin-bottom:20px">Replace this box with your Weeloy or Chope embedded booking widget. The widget URL is:<br><span style="color:var(--red);font-size:12px">weeloy.com/modules/booking/book_form_section.php?bkrestaurant=SG_SG_R_MtsTelokAyer</span></p>
+            <a href="https://www.weeloy.com/modules/booking/book_form_section.php?redirect=1&bkrestaurant=SG_SG_R_MtsTelokAyer" target="_blank" class="btn btn-red">BOOK NOW (EXTERNAL LINK)</a>
+          </div>
+          <div style="border:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+            <div>
+              <div style="font-family:var(--ff-disp);font-size:11px;color:var(--white);margin-bottom:3px">Walk-ins welcome</div>
+              <div style="font-size:13px;color:var(--grey)">No reservation? Come in. We'll do our best.</div>
+            </div>
+            <div style="font-family:var(--ff-disp);font-size:10px;letter-spacing:0.15em;color:var(--red)">OPEN DAILY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PAGE: CONTACT
+     SEO: NAP consistency, local search signals, Telok Ayer location
+════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="contact-hero">
+    <div class="container">
+      <span class="label label-red" style="margin-bottom:14px">CONTACT US</span>
+      <h1 class="section-title-lg">GET IN<br><span class="outline">TOUCH</span></h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-map">
+          <div class="map-pulse"></div>
+          <div class="map-tag"><div class="mt-name">Meatsmith</div><div class="mt-addr">167 Telok Ayer Street, S068618</div></div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px">
+          <a href="https://maps.google.com/?q=Meatsmith+167+Telok+Ayer+Street+Singapore" target="_blank" class="btn btn-outline btn-sm">OPEN IN GOOGLE MAPS →</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="contact-info-title">167 Telok Ayer<br>Street,<br><span style="color:var(--red)">Singapore.</span></h2>
+        <!-- NAP — must match GBP: Name, Address, Phone -->
+        <div class="ci-block"><div class="ci-label">ADDRESS</div><div class="ci-val">167 Telok Ayer Street<br>Singapore 068618</div></div>
+        <div class="ci-block"><div class="ci-label">PHONE</div><div class="ci-val"><a href="tel:+6562212262">+65 6221 2262</a></div></div>
+        <div class="ci-block"><div class="ci-label">HOURS</div><div class="ci-val">Monday – Sunday<br>11:30am – 10:30pm</div></div>
+        <div class="ci-block"><div class="ci-label">DINE-IN</div><div class="ci-val"><a href="mailto:eat@meatsmith.com.sg">eat@meatsmith.com.sg</a></div></div>
+        <div class="ci-block"><div class="ci-label">CATERING</div><div class="ci-val"><a href="mailto:eat@meatsmith.com.sg">eat@meatsmith.com.sg</a><div class="note">Corporate events, weddings, private parties</div></div></div>
+        <div class="ci-block"><div class="ci-label">MRT</div><div class="ci-val">Telok Ayer (DT18) — 3 min walk<br>Tanjong Pagar (EW15) — 7 min walk</div></div>
+        <div class="ci-block"><div class="ci-label">SOCIAL</div><div class="ci-val"><a href="https://instagram.com/meatsmith.sg" target="_blank">@meatsmith.sg on Instagram</a><br><a href="https://facebook.com/meatsmith.sg" target="_blank">Meatsmith on Facebook</a></div></div>
+        
+        <div style="margin-top:32px;display:flex;gap:10px;flex-wrap:wrap">
+          <button onclick="showPage('reservation')" class="btn btn-primary">RESERVE A TABLE</button>
+          <button onclick="showPage('catering')" class="btn btn-outline">CATERING ENQUIRY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── PAGE ROUTING ──────────────────────────────────────────
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  // Update nav active state
+  document.querySelectorAll('.nav-center button,.nav-center a').forEach(b=>{
+    b.classList.toggle('active', b.id==='nav-'+name);
+  });
+  window.scrollTo({top:0,behavior:'instant'});
+  initReveal();
+}
+
+// ── HAPPENINGS TAB SWITCHER ────────────────────────────────
+function switchHappTab(tab){
+  var events  = document.getElementById('happ-events');
+  var stories = document.getElementById('happ-stories');
+  var tabE    = document.getElementById('happ-tab-events');
+  var tabS    = document.getElementById('happ-tab-stories');
+  if(tab === 'events'){
+    events.style.display  = '';
+    stories.style.display = 'none';
+    tabE.classList.add('active');
+    tabS.classList.remove('active');
+  } else {
+    events.style.display  = 'none';
+    stories.style.display = '';
+    tabS.classList.add('active');
+    tabE.classList.remove('active');
+    initReveal();
+  }
+}
+
+// ── STORY FILTER (All / Event Recaps / BBQ Guides) ────────
+function filterStories(type, btn){
+  document.querySelectorAll('#storiesGrid article').forEach(function(card){
+    if(type === 'all'){
+      card.style.display = '';
+    } else {
+      card.style.display = (card.dataset.type === type) ? '' : 'none';
+    }
+  });
+  // Handle featured card grid-column when filtering
+  var featured = document.querySelector('.story-card-featured');
+  if(featured) featured.style.gridColumn = featured.style.display === 'none' ? '' : '1 / -1';
+  // Update filter button states
+  document.querySelectorAll('.stories-hdr button').forEach(function(b){ b.style.borderColor=''; b.style.color=''; });
+  if(btn){ btn.style.borderColor='var(--red)'; btn.style.color='var(--red)'; }
+}
+
+// ── MENU TABS ─────────────────────────────────────────────
+function switchMenu(id){
+  document.querySelectorAll('.menu-section-wrap').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('menu-'+id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ── FAQ ACCORDION ─────────────────────────────────────────
+function toggleFaq(el){el.classList.toggle('open')}
+
+// ── NAV SCROLL ────────────────────────────────────────────
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainNav').classList.toggle('solid',scrollY>40);
+},{passive:true});
+
+// ── SCROLL REVEAL ─────────────────────────────────────────
+function initReveal(){
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:0.1});
+  document.querySelectorAll('#page-'+getCurrentPage()+' .reveal').forEach(el=>{
+    el.classList.remove('in');
+    io.observe(el);
+  });
+}
+function getCurrentPage(){
+  const p=document.querySelector('.page.active');
+  return p?p.id.replace('page-',''):'home';
+}
+initReveal();
+
+// ── CATERING FORM ─────────────────────────────────────────
+function handleCateringForm(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('[type=submit]');
+  btn.textContent='ENQUIRY SENT ✓';
+  btn.style.background='var(--red)';
+  btn.disabled=true;
+  setTimeout(()=>{btn.textContent='SEND CATERING ENQUIRY →';btn.style.background='';btn.disabled=false;},3000);
+  // In production: POST to your backend or mailto:eat@meatsmith.com.sg
+}
+</script>
+</body>
+</html>
